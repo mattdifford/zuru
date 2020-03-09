@@ -16,7 +16,7 @@
 title: CHANGE ME
 email: matt@difford.pw
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.zurugroup.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://www.zurugroup.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 company_number: 10852341
 vat_number: 0123456789
