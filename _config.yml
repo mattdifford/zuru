@@ -16,7 +16,13 @@
 title: CHANGE ME
 email: matt@difford.pw
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.zurugroup.com" # the base hostname & protocol for your site, e.g. http://example.com
+
+company_number: 10852341
+vat_number: 0123456789
+
+# Email signatures
+email_disclaimer: This email and any files transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you are not the intended recipient, you should not copy it, re-transmit it, use it or disclose its contents, but should return it to the sender immediately and delete your copy from your system. Zuru Group does not accept legal responsibility for the contents of this message. Any views or opinions presented are solely those of the author and do not necessarily represent those of Zuru Group
 
 # Build settings
 theme: minima
