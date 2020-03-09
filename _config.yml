@@ -16,7 +16,7 @@
 title: ZURU Group
 email: info@zurugroup.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.zurugroup.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.zurugroup.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 company_number: 10852341
 vat_number: 293058193
