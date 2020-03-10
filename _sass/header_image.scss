@@ -1,0 +1,40 @@
+.header-image {
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  &__wave {
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    min-width: 1750px;
+  }
+  .container,
+  &__wrapper {
+    height: 100%;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__text {
+    opacity: 1;
+    font-size: 100px;
+    strong {
+      color: $colour_secondary;
+      display: block;
+    }
+  }
+  @include in_size($mobile) {
+    &__wave {
+      margin-left: -230px;
+    }
+    &__text {
+      font-size: 40px;
+    }
+  }
+}

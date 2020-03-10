@@ -1,0 +1,36 @@
+html {
+  font-family: $font_primary;
+  font-weight: $font-weight_light;
+}
+
+.header {
+  display: block;
+  padding: 20px 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  &__logo {
+    width: 100px;
+    display: inline-block;
+    svg {
+      max-width: 100%;
+    }
+    #text,
+    #border {
+      transition: all 0.2s ease-in-out 0s;
+    }
+    &:hover {
+      #text {
+        fill: $colour_secondary;
+      }
+      #border {
+        stroke: $colour_secondary;
+      }
+    }
+  }
+  @include in_size($mobile) {
+    padding: 20px 15px;
+  }
+}
