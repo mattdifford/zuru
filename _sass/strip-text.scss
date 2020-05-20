@@ -1,0 +1,29 @@
+.strip-text {
+  padding: 140px 0;
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  transition: color $body_transition;
+  &__wrapper {
+    display: flex;
+  }
+  &__col {
+    padding: 0 100px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out 0.2s;
+    transform: translateY(15px);
+    &.scrolled {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h3 {
+      @include title_style();
+    }
+  }
+}
+
+body.alt-colour {
+  .strip-text {
+    color: $colour_primary;
+  }
+}

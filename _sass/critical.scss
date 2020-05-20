@@ -1,19 +1,12 @@
 body {
-  background: $colour_primary;
+  background-color: $colour_primary;
+  transition: background-color $body_transition;
+  &.fade-out {
+    .body-wrapper {
+      opacity: 0;
+    }
+  }
 }
-
-.header {
+.panel {
   display: none;
-}
-
-.header-image {
-  height: 100vh;
-  &__wave,
-  &__text {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out 0.2s;
-  }
-  &__text {
-    transition-delay: 1s;
-  }
 }

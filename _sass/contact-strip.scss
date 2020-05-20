@@ -1,0 +1,16 @@
+.contact-strip {
+  padding: 40px 0;
+  background: $colour_primary;
+  color: #fff;
+  &__wrapper {
+    display: flex;
+    margin: 0 -30px;
+  }
+  &__col {
+    flex: 0 1 50%;
+    padding: 0 30px;
+    h3 {
+      font-size: 40px;
+    }
+  }
+}

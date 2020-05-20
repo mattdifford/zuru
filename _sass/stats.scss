@@ -1,0 +1,50 @@
+.stats-strip {
+  background: $colour_primary;
+  padding: 40px 0;
+  &__wrapper {
+    display: flex;
+    @include in_size($xs) {
+      flex-wrap: wrap;
+    }
+  }
+  &__col {
+    flex: 0 1 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    @include in_size($xs) {
+      padding: 15px 0;
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+  &__image {
+    border-right: 5px solid #fff;
+    padding-right: 25px;
+    margin-right: 25px;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    @include in_size($xs) {
+      flex: 0 0 100px;
+      border-right: none;
+    }
+  }
+  &__title {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0;
+    line-height: 1.2;
+    @include in_size($sm-only) {
+      font-size: 30px;
+    }
+    @include in_size($xs) {
+      font-size: 25px;
+    }
+    strong {
+      display: block;
+    }
+  }
+}

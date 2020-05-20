@@ -69,6 +69,8 @@ plugins:
   - jekyll-include-cache
   - jekyll-webp
 
+brands: 'vodafone,ou,vitality,o2,barclaycard,gus,apple,lgc,secretescapes,afh,samsung,2u'
+wave_count: 4
 
 ############################################################
 # Site configuration for the WebP Generator Plugin

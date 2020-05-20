@@ -1,0 +1,54 @@
+.sectors-strip {
+  display: inline-block;
+  width: 100%;
+  padding: 140px 0;
+  text-align: center;
+  color: $colour_dark_grey;
+  background: $colour_light_grey;
+  h2 {
+    @include title_style();
+    display: inline-block;
+    transition: color $body_transition;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -20px;
+  }
+  &__item {
+    flex: 0 1 50%;
+    padding: 20px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out 0.2s;
+    transform: translateY(15px);
+    &.scrolled {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 3px 6px 0 rgba(#000000, 0.16);
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+    height: 100%;
+    transition: $body_transition;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  &__title {
+    position: relative;
+    z-index: 2;
+    font-size: 45px;
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: left;
+  }
+}

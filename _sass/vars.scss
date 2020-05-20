@@ -1,7 +1,17 @@
-$colour_primary: #000;
-$colour_secondary: #05FFC5;
+$colour_primary: #212121;
+$colour_secondary: #05ffc5;
+$colour_light_grey: #f7f7f7;
+$colour_dark_grey: #212121;
 
-$font_primary: "canada-type-gibson", sans-serif;
+$colour_perf: #eb0000;
+$colour_brand: #ffeb00;
+$colour_influence: #00cc3f;
+$colour_social: #0027ff;
+
+$font_primary: neue-haas-grotesk-display, sans-serif;
+$font_secondary: titling-gothic-fb, sans-serif;
 $font-weight_light: 200;
 $font-weight_medium: 500;
 $font-weight_semibold: 600;
+
+$body_transition: 0.2s ease-in-out 0s;

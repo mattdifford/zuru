@@ -1,31 +1,31 @@
 $xxxs: (
-  max: 450px
+  max: 450px,
 );
 $xxs: (
-  max: 700px
+  max: 700px,
 );
 $xs: (
-  max: 991px
+  max: 991px,
 );
 $sm: (
-  min: 992px
+  min: 992px,
 );
 $md: (
-  min: 1200px
+  min: 1200px,
 );
 $lg: (
-  min: 1460px
+  min: 1460px,
 );
 $sm-only: (
   min: map-get($sm, min),
-  max: map-get($md, min) - 1
+  max: map-get($md, min) - 1,
 );
 $md-only: (
   min: map-get($md, min),
-  max: map-get($lg, min) - 1
+  max: map-get($lg, min) - 1,
 );
 $mobile: (
-  max: map-get($md, min) - 1
+  max: map-get($md, min) - 1,
 );
 
 @mixin in_size($map) {
@@ -50,4 +50,12 @@ $mobile: (
 
 @mixin media($map) {
   @include in_size($map);
+}
+
+@mixin title_style() {
+  font-size: 75px;
+  line-height: 1;
+  font-weight: 600;
+  padding: 0 0 10px;
+  margin: 0 0 25px;
 }

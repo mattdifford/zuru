@@ -1,9 +1,48 @@
 <!DOCTYPE html>
 <html lang="en-gb">
 {%-include head.html-%}
-<body>
-    {%- include header.html -%}
-    {%- include header_image.html text="We are a <strong>digital activation</strong> agency." -%}
+
+<body class="fade-out">
+    <div class="body-wrapper">
+        <div class="panels">
+            {%include panel-intro.html %}
+            {%include panel-about.html %}
+            {%include panel-say.html %}
+            {%include panel-contact.html %}
+            <div class="panels__nav">
+                <div class="container">
+                    <div class="panels__nav-wrapper">
+                        <div class="panels__nav-item panels__nav-item--active" data-index="0"></div>
+                        <div class="panels__nav-item" data-index="1"></div>
+                        <div class="panels__nav-item" data-index="2"></div>
+                        <div class="panels__nav-item" data-index="3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%- include footer.html -%}
+    </div>
     {%- include foot.html layout=page.layout -%}
+    <script>
+        setTimeout(function () {
+            $('.panel--intro').addClass('panel--active');
+        }, 200)
+        $('.panels__nav-item').on("click", function () {
+            if (!$(this).hasClass('panels__nav-item--active') && !$('.panels__nav').hasClass('blocked')) {
+                $('.panels__nav').addClass('blocked')
+                var index = $(this).attr("data-index");
+                var $panels = $('.panels .panel');
+                var $panel = $panels.eq(index);
+                $panels.removeClass('panel--active');
+                $panel.addClass('panel--active');
+                $('.panels__nav-item').removeClass('panels__nav-item--active');
+                $(this).addClass('panels__nav-item--active');
+                setTimeout(function () {
+                    $('.panels__nav').removeClass('blocked')
+                }, 2000);
+            }
+        });
+    </script>
 </body>
+
 </html>

@@ -1,5 +1,8 @@
 $(document).ready(function () {
     $('body').addClass("loaded");
+    setTimeout(function(){
+        $('body').removeClass('fade-out');
+    },200)
     var elements = document.querySelectorAll('.scrollwatch');
     var config = {
         threshold: 0.01
@@ -8,7 +11,7 @@ $(document).ready(function () {
     function onIntersection(entries) {
         entries.forEach(entry => {
             if (entry.intersectionRatio > 0) {
-                observer.unobserve(entry.target);
+
                 handleScrolledIntoView(entry.target);
             }
         });
@@ -24,57 +27,13 @@ $(document).ready(function () {
     }
     function handleScrolledIntoView(target) {
         target.classList.add('scrolled');
+
     }
 
     $('a').on("click", function () {
         if ($(this).attr("href").charAt(0) === '#') {
             $("html,body").animate({ scrollTop: $($(this).attr("href")).offset().top - 100 }, 750);
         }
-    });
-    $('#signup_form .form__button').on("click", function (e) {
-        e.preventDefault();
-        $('.form__message').remove();
-        var parent_form = $('#signup_form');
-        parent_form.parsley().whenValidate({
-            force: true
-        }).done(function () {
-            var formData = parent_form.serializeObject();
-            formData.lp_campaign_id = '5e30378c0b5a5';
-            formData.lp_campaign_key = 'nNXfVJ7d4Gzcwby2Zp6P';
-            $.ajax({
-                async: true,
-                url: 'https://savvy.leadspediatrack.com/post.do',
-                data: formData,
-                type: 'POST',
-                dataType: "xml",
-                success: function (data) {
-                    var response = data.all;
-                    var nodes = [];
-                    for (i = 0; i < response.length; i++) {
-                        nodes[data.all[i].nodeName] = i;
-                    }
-                    var result_index = nodes["result"];
-                    var error_index = nodes["error"];
-                    var success = true;
-                    var msg = 'You have successfully subscribed. Check your inbox for your £15 off code';
-                    if (response[result_index].innerHTML === 'failed') {
-                        success = false;
-                        if (response[error_index].innerHTML === 'Invalid Email') {
-                            msg = 'Please check your email address and try again';
-                        } else {
-                            msg = 'This email address is already subscribed';
-                        }
-                    }
-                    if (success) {
-                        gtag('event', 'Successful subscription', { 'event_category': 'Subscription', 'event_label': 'Subscribed from signup.afinehour.com' });
-                    }
-                    parent_form.append('<p class="form__message ' + (success ? 'form__message--success' : 'form__message--error') + '">' + msg + '</p>');
-                },
-                error: function (e) {
-                    parent_form.append('<p class="form__message form__message--error">Something went wrong, please try again.</p>');
-                }
-            });
-        });
     });
 });
 
@@ -93,3 +52,30 @@ $.fn.serializeObject = function () {
     });
     return o;
 };
+
+let links = document.querySelectorAll('a');
+if (links) {
+    links.forEach((link) => {
+        link.onclick = (e) => {
+            let body = document.querySelector('body');
+            if (!e.srcElement.parentElement.href) {
+                var href = e.srcElement.href;
+            } else {
+                var href = e.srcElement.parentElement.href;
+            }
+            if (href.charAt(0) != '#') {
+                e.preventDefault();
+                setTimeout(function () {
+                    if (body.classList.contains('fade-out')) {
+                        console.log('navigating');
+                        window.location = href;
+                    } else {
+                        console.log('whoops', e.srcElement.parentElement.href);
+                    }
+                }, 200);
+                body.classList.add('fade-out');
+            }
+        }
+    })
+}
+
