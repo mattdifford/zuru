@@ -13,14 +13,29 @@
     font-size: 280px;
     line-height: 1;
     font-weight: 600;
+    opacity: 0;
+    animation: hp-fade-in 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
   }
   &__subtitle {
     font-size: 69px;
+    animation: hp-fade-in 0.5s ease-in-out 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
   }
   &--about-us {
     .header-panel__title {
       background-image: url("/images/wave.png");
       background-color: #fc3a52;
     }
+  }
+}
+
+@keyframes hp-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

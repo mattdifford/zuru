@@ -2,14 +2,14 @@
 
 <div class="clients-strip">
     <div class="container">
-        <div class="clients-strip__title-wrapper">
+        <div class="clients-strip__title-wrapper scrollwatch">
             <h3 class="clients-strip__title">We work with many businesses and help them grow</h3>
         </div>
-        <div class="clients-strip__subtitle-wrapper">
+        <div class="clients-strip__subtitle-wrapper scrollwatch">
             <p class="clients-strip__subtitle">Based in Bristol, we create brands for Lead Generation & Engaged
                 Audiences. </p>
         </div>
-        <div class="clients-strip__clients">
+        <div class="clients-strip__clients scrollwatch">
             {% for client in clients %}
             {% capture url%}/images/client-{{client}}.png{%endcapture%}
             <div class="clients-strip__client">

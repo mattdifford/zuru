@@ -21,6 +21,11 @@
   &__stats {
     flex: 0 1 50%;
     padding-left: 50px;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out 1.2s;
+    &.scrolled {
+      opacity: 1;
+    }
   }
   &__stat {
     display: flex;
