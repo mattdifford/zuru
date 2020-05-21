@@ -3,16 +3,22 @@
   position: relative;
   &__nav {
     position: absolute;
-    bottom: 150px;
+    bottom: 50px;
     z-index: 2;
     width: 100%;
     transition: opacity 0.2s ease-in-out 0s;
+    pointer-events: none;
+    .container {
+      pointer-events: none;
+    }
     &-wrapper {
+      pointer-events: none;
       display: flex;
       width: 100%;
       justify-content: flex-end;
     }
     &-item {
+      pointer-events: auto;
       display: block;
       border-radius: 50%;
       width: 20px;
@@ -41,9 +47,28 @@
   opacity: 0;
   width: 100%;
   transition: all 0.5s ease-in-out 0s;
+  padding-bottom: 75px;
+  &__link {
+    opacity: 0;
+    transition: all 0.8s ease-in-out 1.2s;
+    &-wrapper {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      bottom: 50px;
+      z-index: 3;
+    }
+  }
   &--active {
     transition: all 0.5s ease-in-out 0.5s;
     opacity: 1;
+    z-index: 2;
+    .panel {
+      &__link {
+        opacity: 1;
+        transition: all 0.4s ease-in-out 0s;
+      }
+    }
   }
   &--intro {
     background-repeat: no-repeat;
@@ -80,11 +105,14 @@
         justify-content: center;
         width: 100%;
         h1 {
-          font-size: 72px;
+          font-size: 58px;
           span {
             opacity: 0;
             display: block;
             transition: opacity 0.8s ease-in-out 0s;
+            &:nth-child(3) {
+              font-size: 72px;
+            }
           }
         }
       }
@@ -167,7 +195,7 @@
   }
   &--say {
     background-color: #291d7f;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: right bottom;
     @at-root html.webp {
@@ -193,10 +221,138 @@
         h2 {
           margin: 0;
           font-size: 200px;
+          line-height: 0.9;
+          opacity: 0;
+          transition: opacity 0.8s ease-in-out 0s;
+        }
+      }
+      &__link {
+        color: #fff;
+      }
+    }
+    &.panel--active {
+      .panel {
+        &__content {
+          h2 {
+            opacity: 1;
+            transition: opacity 0.8s ease-in-out 1s;
+          }
+        }
+      }
+    }
+  }
+  &--do {
+    background-color: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    @at-root html.webp {
+      .panel--do {
+        background-image: url("/images/stripes.webp");
+      }
+    }
+    @at-root html:not(.webp) {
+      .panel--do {
+        background-image: url("/images/stripes.png");
+      }
+    }
+    .panel {
+      &__content {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        mix-blend-mode: overlay;
+        h2 {
+          margin: 0;
+          font-size: 80px;
           line-height: 1;
           opacity: 0;
           transition: opacity 0.8s ease-in-out 0s;
         }
+      }
+      &__list {
+        display: flex;
+        flex-wrap: wrap;
+        &-item {
+          flex: 0 1 50%;
+          padding: 25px 0;
+          a {
+            opacity: 0;
+            color: #fff;
+            text-decoration: none;
+            font-size: 110px;
+            transition: opacity 0.5s ease-in-out 0.8s;
+            &:hover {
+              opacity: 1 !important;
+            }
+          }
+        }
+      }
+      &__link {
+        color: #fff;
+      }
+    }
+    &.panel--active {
+      .panel {
+        &__content {
+          h2 {
+            opacity: 1;
+            transition: opacity 0.8s ease-in-out 1s;
+          }
+        }
+        &__list {
+          &-item {
+            a {
+              opacity: 0.4;
+              transition: opacity 0.5s ease-in-out 0s;
+            }
+          }
+        }
+      }
+    }
+  }
+  &--brands {
+    background-color: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    @at-root html.webp {
+      .panel--brands {
+        background-image: url("/images/blobs.webp");
+      }
+    }
+    @at-root html:not(.webp) {
+      .panel--brands {
+        background-image: url("/images/blobs.png");
+      }
+    }
+    .panel {
+      &__content {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        mix-blend-mode: overlay;
+        h2 {
+          margin: 0;
+          font-size: 200px;
+          line-height: 1;
+          opacity: 0;
+          transition: opacity 0.8s ease-in-out 0s;
+        }
+      }
+      &__link {
+        color: #fff;
       }
     }
     &.panel--active {
@@ -234,10 +390,7 @@
         justify-content: center;
         width: 100%;
         h2 {
-          position: absolute;
-          top: 50%;
-          margin: 0;
-          transform: translateY(-50%);
+          margin: 0 0 30px;
           font-size: 90px;
           opacity: 0;
           transition: opacity 0.8s ease-in-out 0s;
@@ -254,5 +407,44 @@
         }
       }
     }
+  }
+}
+
+.form {
+  background: #fff;
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__field-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.field {
+  flex: 0 1 50%;
+  padding: 25px;
+  position: relative;
+  &__input {
+    border: none;
+    border-bottom: 3px solid #000000;
+    width: 100%;
+    padding: 15px;
+    &--textarea {
+      height: 200px;
+    }
+  }
+  &__label {
+    color: #a2a2a2;
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    font-size: 25px;
+    font-family: $font_secondary;
+  }
+  &--long {
+    flex: 0 1 100%;
   }
 }

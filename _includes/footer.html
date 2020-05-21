@@ -1,12 +1,10 @@
 <footer class="footer">
     <div class="container">
-        <div class="footer__top">
-            <div class="footer__col">
-                <h3>For updates</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
-            </div>
+        <div class="footer__col--logo">
+            <a class="footer__logo" href="/" title="{{site.title}}">{% include logo-icon.svg %}</a>
+        </div>
+        <div class="footer__bottom">
+            <p>Copyright &copy; {{site.title}} {{ "now" | date: "%Y" }}</p>
             <div class="footer__col footer__col--social">
                 <a class="footer__social" title="Facebook" href="{{site.facebook_url | absolute_url}}" target="_blank"
                     rel="external noopener"><span class="icon-facebook"></span></a>
@@ -15,12 +13,6 @@
                 <a class="footer__social" title="Instagram" href="{{site.instagram_url | absolute_url}}" target="_blank"
                     rel="external noopener"><span class="icon-instagram bg"></span></a class="footer__social">
             </div>
-        </div>
-        <div class="footer__col--logo">
-            <a class="footer__logo" href="/" title="{{site.title}}">{% include logo-icon.svg %}</a>
-        </div>
-        <div class="footer__bottom">
-            <p>Copyright &copy; {{site.title}} {{ "now" | date: "%Y" }}</p>
         </div>
     </div>
 </footer>

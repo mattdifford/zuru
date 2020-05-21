@@ -178,3 +178,9 @@ body.fade-out {
     background: $colour_social;
   }
 }
+
+.page {
+  &__content {
+    color: #fff;
+  }
+}

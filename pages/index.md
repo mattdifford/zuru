@@ -1,13 +1,5 @@
 ---
 layout: home
-description: Page Description
+description: This is results-driven innovation. This is money-where-our-mouth-is marketing. This is ZURU Group.
 permalink: /
-text_left: >
-    ### About
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.
-text_right: >
-    ### Our story
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.
 ---
