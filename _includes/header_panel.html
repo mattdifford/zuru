@@ -1,0 +1,10 @@
+{% assign slug = include.title | slugify %}
+
+<div class="header-panel header-panel--{{slug}}">
+    <div class="container">
+        <h1 class="header-panel__title">{{include.title}}</h1>
+        <div class="header-panel__subtitle">
+            {{include.subtitle |markdownify}}
+        </div>
+    </div>
+</div>

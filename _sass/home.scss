@@ -168,7 +168,7 @@
         }
         h3 {
           margin: 40px 0 0;
-          font-size: 68px;
+          font-size: 64px;
           line-height: 1;
           opacity: 0;
         }
@@ -280,15 +280,18 @@
       &__list {
         display: flex;
         flex-wrap: wrap;
+        margin: 0 -25px;
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out 0s;
         &-item {
           flex: 0 1 50%;
           padding: 25px;
           a {
-            opacity: 0;
+            opacity: 0.4;
             color: #fff;
             text-decoration: none;
-            font-size: 110px;
-            transition: opacity 0.5s ease-in-out 0.8s;
+            font-size: 100px;
+            transition: opacity 0.4s ease-in-out 0s;
             &:hover {
               opacity: 1 !important;
             }
@@ -308,12 +311,8 @@
           }
         }
         &__list {
-          &-item {
-            a {
-              opacity: 0.4;
-              transition: opacity 0.5s ease-in-out 0s;
-            }
-          }
+          opacity: 1;
+          transition: opacity 0.8s ease-in-out 1.4s;
         }
       }
     }
@@ -397,6 +396,10 @@
         }
       }
     }
+    .form {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out 1.5s;
+    }
     &.panel--active {
       .panel {
         &__content {
@@ -406,12 +409,16 @@
           }
         }
       }
+      .form {
+        opacity: 1;
+      }
     }
   }
 }
 
 .form {
   background: #fff;
+  padding: 15px;
   fieldset {
     border: none;
     margin: 0;
@@ -429,11 +436,27 @@
   position: relative;
   &__input {
     border: none;
-    border-bottom: 3px solid #000000;
+    border-bottom: 3px solid #000;
     width: 100%;
-    padding: 15px;
+    padding: 10px;
+    font-family: $font_secondary;
+    font-size: 18px;
+
+    &:not(:placeholder-shown),
+    &:focus {
+      border: 1px solid #000;
+      border-bottom-width: 3px;
+      + .field__label {
+        transform: scale(0.5) translateY(-40px);
+      }
+    }
     &--textarea {
       height: 200px;
+      border: none !important;
+      border-bottom: 3px solid #000 !important;
+      + .field__label {
+        transform: scale(1) translateY(-50px) !important;
+      }
     }
   }
   &__label {
@@ -441,10 +464,13 @@
     position: absolute;
     left: 25px;
     top: 25px;
-    font-size: 25px;
+    font-size: 22px;
     font-family: $font_secondary;
+    transition: transform 0.2s ease-in-out 0s;
+    transform-origin: top left;
   }
   &--long {
     flex: 0 1 100%;
+    margin-top: 30px;
   }
 }

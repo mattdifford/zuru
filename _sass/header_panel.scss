@@ -1,0 +1,26 @@
+.header-panel {
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  &__title {
+    background-size: cover;
+    background-position: bottom right;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 50px;
+    font-size: 280px;
+    line-height: 1;
+    font-weight: 600;
+  }
+  &__subtitle {
+    font-size: 69px;
+  }
+  &--about-us {
+    .header-panel__title {
+      background-image: url("/images/wave.png");
+      background-color: #fc3a52;
+    }
+  }
+}

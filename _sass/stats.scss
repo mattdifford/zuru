@@ -1,50 +1,38 @@
 .stats-strip {
-  background: $colour_primary;
-  padding: 40px 0;
+  padding: 100px 0;
+  background: #19036c;
+  color: #fff;
   &__wrapper {
     display: flex;
-    @include in_size($xs) {
-      flex-wrap: wrap;
+  }
+  &__content {
+    flex: 0 1 50%;
+    padding-right: 50px;
+    h2 {
+      font-size: 100px;
+      font-weight: 600;
+      margin: 0 0 50px;
+    }
+    p {
+      font-size: 22px;
+      line-height: 1.4;
     }
   }
-  &__col {
-    flex: 0 1 100%;
-    padding: 0 30px;
+  &__stats {
+    flex: 0 1 50%;
+    padding-left: 50px;
+  }
+  &__stat {
     display: flex;
     align-items: center;
-    @include in_size($xs) {
-      padding: 15px 0;
-      &:first-child {
-        padding-top: 0;
+    h3 {
+      margin-left: 20px;
+      font-size: 48px;
+      line-height: 1;
+      strong {
+        display: block;
+        color: #06a48d;
       }
-    }
-  }
-  &__image {
-    border-right: 5px solid #fff;
-    padding-right: 25px;
-    margin-right: 25px;
-    height: 100%;
-    display: inline-flex;
-    align-items: center;
-    @include in_size($xs) {
-      flex: 0 0 100px;
-      border-right: none;
-    }
-  }
-  &__title {
-    color: #fff;
-    font-size: 25px;
-    font-weight: 300;
-    margin: 0;
-    line-height: 1.2;
-    @include in_size($sm-only) {
-      font-size: 30px;
-    }
-    @include in_size($xs) {
-      font-size: 25px;
-    }
-    strong {
-      display: block;
     }
   }
 }
