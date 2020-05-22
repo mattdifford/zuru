@@ -21,75 +21,57 @@ a {
   color: inherit;
 }
 
+.button {
+  background: #291d7f;
+  color: #fff;
+  border: none;
+  font-family: $font_secondary;
+  font-size: 18px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out 0s;
+  &:hover {
+    background: lighten(#291d7f, 10%);
+  }
+}
 .header {
-  display: block;
-  padding: 20px 50px;
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  background: #fff;
+  padding: 20px 0;
   &__logo {
-    width: 100px;
-    display: inline-block;
-    svg {
-      max-width: 100%;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #000;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &:before {
+      content: "Logo here";
     }
   }
   &__wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
-  &__item {
-    flex: 0 1 100%;
-  }
-  &__title {
-    text-align: center;
-    path {
-      transition: $body_transition;
+  &__menu-icon {
+    background: #fff;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-inner {
+      display: inline-block;
+      width: 100%;
+      height: 3px;
+      background: #000;
     }
-    &:hover {
-      path {
-        fill: $colour_secondary;
-      }
-    }
-  }
-  &__nav {
-    text-align: right;
-    &-link {
-      margin: 0 15px;
-      color: #fff;
-      text-decoration: none;
-      font-family: $font_secondary;
-      font-size: 20px;
-      font-weight: 200;
-      transition: $body_transition;
-      position: relative;
-      padding-bottom: 10px;
-      &:after {
-        transition: $body_transition;
-        position: absolute;
-        display: block;
-        content: "";
-        width: 100%;
-        height: 3px;
-        transform: scaleX(0);
-        background: $colour_secondary;
-        left: 0;
-        bottom: 0;
-        transform-origin: center left;
-      }
-      &:hover {
-        color: $colour_secondary;
-        &:after {
-          transform: scaleX(1);
-        }
-      }
-    }
-  }
-  @include in_size($mobile) {
-    padding: 20px 15px;
   }
 }
 
@@ -104,10 +86,22 @@ a {
   &__top {
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    .footer {
+      &__col {
+        flex: 0 1 auto;
+      }
+    }
   }
   &__bottom {
+    display: flex;
     p {
       font-size: 14px;
+      white-space: nowrap;
+      + p {
+        margin-left: 20px;
+      }
     }
   }
   &__col {
@@ -115,11 +109,17 @@ a {
     &--social {
       display: flex;
       justify-content: flex-end;
+      flex: 1 1 100%;
     }
     &--logo {
       display: flex;
       justify-content: center;
       padding: 25px 0;
+    }
+    &--address {
+      p {
+        font-size: 16px;
+      }
     }
     h3 {
       @include title_style();
@@ -134,21 +134,15 @@ a {
   }
   &__logo {
     width: 100px;
-    display: inline-block;
-    svg {
-      max-width: 100%;
-    }
-    .text,
-    .border {
-      transition: $body_transition;
-    }
-    &:hover {
-      .text {
-        fill: $colour_secondary;
-      }
-      .border {
-        stroke: $colour_secondary;
-      }
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    height: 100px;
+    border: 1px solid #fff;
+    &:before {
+      content: "LOGO HERE";
     }
   }
 }
@@ -161,21 +155,6 @@ a {
 body.fade-out {
   .body-wrapper {
     opacity: 0;
-  }
-}
-
-.bg {
-  &-performance-marketing {
-    background: $colour_perf;
-  }
-  &-branded-content {
-    background: $colour_brand;
-  }
-  &-strategic-digital-marketing {
-    background: $colour_influence;
-  }
-  &-digital-publishing {
-    background: $colour_social;
   }
 }
 

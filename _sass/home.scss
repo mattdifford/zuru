@@ -1,5 +1,5 @@
 .panels {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   &__nav {
     position: absolute;
@@ -47,7 +47,7 @@
   opacity: 0;
   width: 100%;
   transition: all 0.5s ease-in-out 0s;
-  padding-bottom: 75px;
+  padding: 100px 0 75px;
   &__link {
     opacity: 0;
     transition: all 0.8s ease-in-out 1.2s;
@@ -84,6 +84,8 @@
       background-color: #1b0475;
       opacity: 0.69;
       z-index: 1;
+      top: 0;
+      left: 0;
     }
     @at-root html.webp {
       .panel--intro {
@@ -391,7 +393,8 @@
         width: 100%;
         h2 {
           margin: 0 0 30px;
-          font-size: 90px;
+          font-size: 70px;
+          line-height: 1;
           opacity: 0;
           transition: opacity 0.8s ease-in-out 0s;
         }
@@ -415,6 +418,137 @@
       }
     }
   }
+  @include in_size($sm-only) {
+    &--about {
+      .panel {
+        &__content {
+          h2 {
+            font-size: 250px;
+          }
+        }
+      }
+    }
+    &--do {
+      .panel {
+        &__content {
+          h2 {
+            font-size: 40px;
+          }
+        }
+        &__list {
+          margin: 0;
+          &-item {
+            padding: 15px 0;
+            a {
+              font-size: 60px;
+            }
+          }
+        }
+      }
+    }
+    &--brands {
+      .panel {
+        &__content {
+          h2 {
+            font-size: 175px;
+          }
+        }
+      }
+    }
+    &--say {
+      .panel {
+        &__content {
+          h2 {
+            font-size: 125px;
+          }
+        }
+      }
+    }
+  }
+  @include in_size($mobile) {
+    &--do {
+      .panel {
+        &__list {
+          &-item {
+            flex: 0 1 100%;
+          }
+        }
+      }
+    }
+  }
+  @include in_size($xs) {
+    &--intro {
+      .panel {
+        &__content {
+          h1 {
+            font-size: 30px;
+            span {
+              margin: 20px 0;
+            }
+            span:nth-child(3) {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+    }
+    &--about {
+      .panel {
+        &__link {
+          &-wrapper {
+            bottom: 20px;
+          }
+        }
+        &__content {
+          h2 {
+            position: static;
+            transform: none;
+            font-size: 60px;
+          }
+          h3 {
+            font-size: 35px;
+            margin: 0;
+          }
+        }
+      }
+    }
+    &--do {
+      .panel {
+        &__content {
+          h2 {
+            font-size: 30px;
+          }
+        }
+        &__list {
+          margin: 0;
+          &-item {
+            padding: 10px 0;
+            a {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+    }
+    &--brands {
+      .panel {
+        &__content {
+          h2 {
+            font-size: 60px;
+          }
+        }
+      }
+    }
+    &--say {
+      .panel {
+        &__content {
+          h2 {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
 }
 
 .form {
@@ -433,7 +567,7 @@
 
 .field {
   flex: 0 1 50%;
-  padding: 25px;
+  padding: 15px;
   position: relative;
   &__input {
     border: none;
@@ -448,11 +582,11 @@
       border: 1px solid #000;
       border-bottom-width: 3px;
       + .field__label {
-        transform: scale(0.5) translateY(-40px);
+        transform: scale(0.5) translateY(-50px);
       }
     }
     &--textarea {
-      height: 200px;
+      height: 100px;
       border: none !important;
       border-bottom: 3px solid #000 !important;
       + .field__label {
@@ -473,5 +607,18 @@
   &--long {
     flex: 0 1 100%;
     margin-top: 30px;
+  }
+  &--submit {
+    flex: 0 1 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.body--home {
+  .header {
+    position: absolute;
+    background: none;
+    z-index: 3;
   }
 }

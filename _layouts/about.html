@@ -4,10 +4,12 @@
 
 <body class="fade-out">
     <div class="body-wrapper">
+        {% include header.html %}
         {%- include header_panel.html title=page.title subtitle=page.subtitle -%}
         {%- include intro_panel.html text=page.quote_text title="Why us?" -%}
         {%- include stats.html -%}
         {%- include clients.html -%}
+        {%- include case_studies.html -%}
         {%- include footer.html -%}
     </div>
     {%- include foot.html layout=page.layout -%}

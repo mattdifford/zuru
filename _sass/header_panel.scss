@@ -29,6 +29,14 @@
       background-color: #fc3a52;
     }
   }
+  @include in_size($sm-only) {
+    &__title {
+      font-size: 240px;
+    }
+    &__subtitle {
+      font-size: 53px;
+    }
+  }
 }
 
 @keyframes hp-fade-in {

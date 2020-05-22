@@ -1,0 +1,9 @@
+items:
+  - title: Raize Gaming
+    colour_primary: 00034B
+    colour_secondary: D32424
+    image: /images/devices.png
+  - title: lifeSOS
+    colour_primary: 34eba5
+    colour_secondary: 19BA9C
+    image: /images/devices.png

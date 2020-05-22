@@ -1,35 +1,79 @@
 $(document).ready(function () {
     $('body').addClass("loaded");
-    setTimeout(function(){
+    setTimeout(function () {
         $('body').removeClass('fade-out');
-    },200)
-    var elements = document.querySelectorAll('.scrollwatch');
-    var config = {
-        threshold: 0.01
-    };
-    var observer;
-    function onIntersection(entries) {
-        entries.forEach(entry => {
-            if (entry.intersectionRatio > 0) {
+        var elements = document.querySelectorAll('.scrollwatch');
+        var config = {
+            threshold: 0.01
+        };
+        var observer;
+        function onIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.intersectionRatio > 0) {
 
-                handleScrolledIntoView(entry.target);
+                    handleScrolledIntoView(entry.target);
+                }
+            });
+        }
+
+        if (!('IntersectionObserver' in window)) {
+            Array.from(elements).forEach(el => handleScrolledIntoView(el));
+        } else {
+            observer = new IntersectionObserver(onIntersection, config);
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        }
+        function handleScrolledIntoView(target) {
+            target.classList.add('scrolled');
+
+        }
+    }, 200)
+    $('.case-studies__nav-item').on("click", function () {
+        if (!$(this).hasClass('active') && !$('.case-studies__nav').hasClass('block')) {
+            $('.case-studies__nav').addClass('block');
+            $('.case-studies__nav-item').removeClass('active');
+            var index = $(this).attr("data-index");
+            var $case_studies = $('.case-studies__list-item');
+            var $new = $case_studies.eq(index);
+            var $current = $('.case-studies__list-item.active');
+            $current.fadeOut();
+            $current.removeClass('active');
+            var $this = $(this);
+            setTimeout(() => {
+                $new.fadeIn().addClass('active');
+                $this.addClass('active');
+                $('.case-studies__nav').removeClass('block');
+                $('.case-studies__buttons').removeClass('block');
+            }, 400);
+        }
+    });
+    $('.case-studies__prev').on("click", function () {
+        if (!$('.case-studies__buttons').hasClass('block')) {
+            $('.case-studies__buttons').addClass('block');
+            var $active = $('.case-studies__nav-item.active');
+            var $new;
+            if ($active.prev().length == 1) {
+                $new = $active.prev();
+            } else {
+                $new = $('.case-studies__nav-item').last();
             }
-        });
-    }
-
-    if (!('IntersectionObserver' in window)) {
-        Array.from(elements).forEach(el => handleScrolledIntoView(el));
-    } else {
-        observer = new IntersectionObserver(onIntersection, config);
-        elements.forEach(el => {
-            observer.observe(el);
-        });
-    }
-    function handleScrolledIntoView(target) {
-        target.classList.add('scrolled');
-
-    }
-
+            $new.trigger("click");
+        }
+    });
+    $('.case-studies__next').on("click", function () {
+        if (!$('.case-studies__buttons').hasClass('block')) {
+            $('.case-studies__buttons').addClass('block');
+            var $active = $('.case-studies__nav-item.active');
+            var $new;
+            if ($active.next().length == 1) {
+                $new = $active.next();
+            } else {
+                $new = $('.case-studies__nav-item').first();
+            }
+            $new.trigger("click");
+        }
+    });
     $('a').on("click", function () {
         if ($(this).attr("href").charAt(0) === '#') {
             $("html,body").animate({ scrollTop: $($(this).attr("href")).offset().top - 100 }, 750);
