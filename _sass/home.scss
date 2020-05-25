@@ -36,11 +36,17 @@
       pointer-events: none;
     }
   }
+  @include in_size($xs) {
+    &__nav {
+      bottom: 30px;
+    }
+  }
 }
 
 .panel {
   display: flex;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -477,6 +483,11 @@
     }
   }
   @include in_size($xs) {
+    &__link {
+      &-wrapper {
+        bottom: 80px;
+      }
+    }
     &--intro {
       .panel {
         &__content {
@@ -549,6 +560,18 @@
       }
     }
   }
+  @media screen and (max-height: 620px) {
+    &--contact {
+      .panel {
+        &__content {
+          h2 {
+            font-size: 20px;
+            margin: 0 0 10px;
+          }
+        }
+      }
+    }
+  }
 }
 
 .form {
@@ -562,6 +585,9 @@
   &__field-wrapper {
     display: flex;
     flex-wrap: wrap;
+  }
+  @include in_size($xs) {
+    padding: 10px 0;
   }
 }
 
@@ -612,6 +638,45 @@
     flex: 0 1 100%;
     display: flex;
     justify-content: flex-end;
+  }
+  @include in_size($xs) {
+    flex: 0 1 100%;
+    padding: 10px;
+    &--long {
+      margin-top: 15px;
+      padding-bottom: 5px;
+    }
+    &--submit {
+      padding: 0 10px;
+      .button {
+        font-size: 16px;
+        padding: 7.5px 25px;
+      }
+    }
+    &__input {
+      font-size: 14px;
+      padding: 5px;
+      &:not(:placeholder-shown),
+      &:focus {
+        + .field__label {
+          transform: scale(0.5) translateY(-30px);
+        }
+      }
+      &--textarea {
+        height: 60px;
+        &:not(:placeholder-shown),
+        &:focus {
+          + .field__label {
+            transform: scale(1) translateY(-30px) !important;
+          }
+        }
+      }
+    }
+    &__label {
+      top: 10px;
+      font-size: 18px;
+      left: 15px;
+    }
   }
 }
 
