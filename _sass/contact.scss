@@ -1,0 +1,26 @@
+.contact-form-strip {
+  min-height: 100vh;
+  padding-top: 100px;
+  iframe {
+    border: none;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 200px);
+  }
+  &__title {
+    color: #fff;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    display: inline-block;
+  }
+}
+
+.body--contact {
+  background: #000;
+  .header {
+    background: $colour_dark_grey;
+  }
+}
