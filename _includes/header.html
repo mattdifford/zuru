@@ -1,9 +1,12 @@
-<div class="header">
+<div class="header{%if include.light%} header--light{%endif%}">
     <div class="container">
         <div class="header__wrapper">
-            <a class="header__logo" href="/">
-
-            </a>
+            {% if include.light == true %}
+            {%assign url = "/images/logo-light.png" %}
+            {% else %}
+            {%assign url = "/images/logo.png" %}
+            {% endif %}
+            <a class="header__logo" href="/">{% include picture.html url=url alt=site.title %}</a>
             <div class="header__menu-icon">
                 <span class="header__menu-icon-inner"></span>
                 <span class="header__menu-icon-inner"></span>
@@ -12,3 +15,4 @@
         </div>
     </div>
 </div>
+{%include menu.html %}
