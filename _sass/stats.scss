@@ -1,42 +1,75 @@
 .stats-strip {
-  padding: 100px 0;
-  background: #19036c;
-  color: #fff;
-  &__wrapper {
+  &__list {
     display: flex;
+    margin: 40px -20px 0;
   }
-  &__content {
-    flex: 0 1 50%;
-    padding-right: 50px;
-    h2 {
-      font-size: 100px;
-      font-weight: 600;
-      margin: 0 0 50px;
+  &__item {
+    color: #959494;
+    flex: 0 1 25%;
+    margin: 0 20px;
+    text-align: center;
+    &-title {
+      font-size: 60px;
+      font-weight: 900;
     }
-    p {
-      font-size: 22px;
-      line-height: 1.4;
-    }
-  }
-  &__stats {
-    flex: 0 1 50%;
-    padding-left: 50px;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out 0.6s;
-    &.scrolled {
-      opacity: 1;
-    }
-  }
-  &__stat {
-    display: flex;
-    align-items: center;
-    h3 {
-      margin-left: 20px;
-      font-size: 48px;
-      line-height: 1;
-      strong {
+    &-text {
+      font-size: 36px;
+      font-weight: 400;
+      span {
         display: block;
-        color: #06a48d;
+      }
+    }
+    &-title,
+    &-text {
+      margin: 0;
+    }
+  }
+  @include in_size($xxs) {
+    &__list {
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    &__item {
+      flex: 0 1 100%;
+      margin: 0;
+      padding: 20px;
+      &-title {
+        font-size: 45px;
+      }
+      &-text {
+        font-size: 24px;
+      }
+    }
+  }
+  @include in_size($xs-only) {
+    &__list {
+      flex-wrap: wrap;
+      margin: 0;
+    }
+    &__item {
+      flex: 0 1 50%;
+      margin: 0;
+      padding: 20px;
+    }
+  }
+
+  @include in_size($sm-only) {
+    &__item {
+      &-title {
+        font-size: 38px;
+      }
+      &-text {
+        font-size: 22px;
+      }
+    }
+  }
+  @include in_size($md-only) {
+    &__item {
+      &-title {
+        font-size: 45px;
+      }
+      &-text {
+        font-size: 24px;
       }
     }
   }

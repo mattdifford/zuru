@@ -1,0 +1,19 @@
+<section class="strip brands-strip split-content-strip">
+    <div class="container">
+        <div class="brands-strip__title-wrapper">
+            <h2 class="brands-strip__title">We do amazing things for amazing brands</h2>
+        </div>
+        <div class="brands-strip__subtitle-wrapper">
+            <p class="brands-strip__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis velit
+                sit
+                amet faucibus posuere. Etiam ipsum nulla, euismod tincidunt hendrerit non, condimentum non quam.</p>
+        </div>
+        <div class="brands-strip__list">
+            {% assign brands = site.brands | split: ',' %}
+            {% for brand in brands %}
+                {%capture url%}/images/client-{{brand}}.png{%endcapture%}
+                <div class="brands-strip__item">{% include picture.html url=url alt=brand %}</div>
+            {%endfor%}
+        </div>
+    </div>
+</section>

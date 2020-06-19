@@ -2,15 +2,17 @@
 <html lang="en-gb">
 {%-include head.html-%}
 
-<body class="fade-out">
+<body class="fade-out body--about">
     <div class="body-wrapper">
-        {% include header.html %}
-        {%- include header_panel.html title=page.title subtitle=page.subtitle -%}
-        {%- include intro_panel.html text=page.quote_text title="Why us?" -%}
-        {%- include stats.html -%}
-        {%- include clients.html -%}
-        {%- include case_studies.html -%}
-        {%- include footer.html -%}
+        {% include_cached header.html %}
+        <div id="main" class="scroll-container">
+            {%- include about_panel.html text=page.header_text-%}
+            {%- include image-strip.html text=page.strip_1.text image=page.strip_1.image-%}
+            {%- include_cached team.html -%}
+            {%- include_cached stats.html -%}
+            {%- include image-strip.html image="/images/blur.png" -%}
+            {%- include_cached brands.html -%}
+        </div>
     </div>
     {%- include foot.html layout=page.layout -%}
 </body>

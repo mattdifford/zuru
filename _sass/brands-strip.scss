@@ -1,0 +1,27 @@
+.brands-strip {
+  min-height: 100vh;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+    flex: 0 1 25%;
+  }
+  img,
+  picture {
+    max-width: 100%;
+  }
+  @include in_size($xxs) {
+    &__item {
+      flex: 0 1 50%;
+      padding: 0 10px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.team-strip {
+  min-height: 100vh;
+  padding-bottom: 0;
+  &__list {
+    background-image: url("/images/team.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 876px;
+    display: flex;
+    margin-top: 20px;
+    &-outer {
+      background: #fff;
+    }
+  }
+  &__item {
+    flex: 0 1 (100% /3);
+    opacity: 0;
+    position: relative;
+    transition: opacity 0.3s ease-in-out 0s;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(#e8588d, 0.7);
+    }
+    &:hover {
+      opacity: 1;
+    }
+    &-title {
+      font-size: 25px;
+      font-weight: 600;
+    }
+    &-desc {
+      font-size: 18px;
+    }
+    &-title,
+    &-desc {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  @include in_size($xxs) {
+    &__list {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 10px 0;
+      background: none;
+    }
+    &__item {
+      flex: 0 1 100%;
+      opacity: 1;
+      margin: 10px 0;
+    }
+  }
+}

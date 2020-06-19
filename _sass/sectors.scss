@@ -1,54 +1,81 @@
 .sectors-strip {
-  display: inline-block;
-  width: 100%;
-  padding: 140px 0;
-  text-align: center;
-  color: $colour_dark_grey;
-  background: $colour_light_grey;
-  h2 {
-    @include title_style();
-    display: inline-block;
-    transition: color $body_transition;
-  }
-  &__list {
+  position: relative;
+  overflow: hidden;
+  &__top {
+    min-height: 100vh;
+    background-image: url("/images/blobs.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 -20px;
+    align-items: center;
   }
   &__item {
-    flex: 0 1 50%;
-    padding: 20px;
-    opacity: 0;
-    transition: all 0.5s ease-in-out 0.2s;
-    transform: translateY(15px);
-    &.scrolled {
-      opacity: 1;
-      transform: translateY(0);
+    font-size: 50px;
+    display: inline-block;
+    cursor: pointer;
+    &:after {
+      margin-top: 10px;
+      content: "";
+      height: 3px;
+      display: block;
+      background: #fff;
+      width: 100%;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease-in-out 0s;
+    }
+    &:hover {
+      &:after {
+        transform: scaleX(1);
+      }
     }
   }
-  &__link {
-    display: inline-flex;
-    align-items: center;
+  &__sector {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    box-shadow: 0 3px 6px 0 rgba(#000000, 0.16);
-    color: #fff;
-    text-decoration: none;
-    position: relative;
-    padding: 100px 0;
-    overflow: hidden;
     height: 100%;
-    transition: $body_transition;
-    &:hover {
-      transform: translateY(-5px);
+    transform: translateY(100%);
+    z-index: 2;
+    transition: transform 0.75s ease-in-out 0s;
+    background: $colour_dark_grey;
+    display: flex;
+    align-items: center;
+    &.active {
+      transform: translateY(0);
+    }
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
   }
   &__title {
-    position: relative;
-    z-index: 2;
-    font-size: 45px;
-    max-width: 60%;
-    margin: 0 auto;
-    text-align: left;
+    flex: 0 1 60%;
+    font-size: 60px;
+    &-wrapper {
+      display: flex;
+      flex: 0 1 100%;
+    }
+  }
+  &__content {
+    flex: 0 1 50%;
+  }
+  &__close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 3;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out 0;
+    &.active {
+      transition: opacity 0.3s ease-in-out 0.75s;
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
 }

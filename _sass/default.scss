@@ -7,9 +7,6 @@ html {
   line-height: 1.2;
 }
 
-h1,
-h2,
-h3,
 h4,
 h5,
 h6 {
@@ -17,8 +14,21 @@ h6 {
   font-weight: 500;
 }
 
+h1,
+h2,
+h3 {
+  font-family: $font_secondary;
+  line-height: 1;
+}
+
 a {
   color: inherit;
+}
+
+.strip {
+  padding: 50px 0;
+  display: inline-block;
+  width: 100%;
 }
 
 .button {
@@ -31,6 +41,7 @@ a {
   padding: 10px 25px;
   cursor: pointer;
   transition: all 0.4s ease-in-out 0s;
+  text-decoration: none;
   &:hover {
     background: lighten(#291d7f, 10%);
   }
@@ -41,6 +52,8 @@ a {
   width: 100%;
   background: #fff;
   padding: 20px 0;
+  position: absolute;
+  z-index: 2;
   &__logo {
     width: 80px;
     height: 80px;
@@ -162,5 +175,47 @@ body.fade-out {
 .page {
   &__content {
     color: #fff;
+  }
+}
+
+.split-content-strip {
+  [class$="__title"],
+  [class$="__subtitle"] {
+    flex: 0 1 50%;
+    @include in_size($xxs) {
+      flex: 0 1 100%;
+    }
+  }
+  [class$="__title-wrapper"],
+  [class$="__subtitle-wrapper"] {
+    display: flex;
+    justify-content: flex-end;
+  }
+  [class$="__title"] {
+    margin: 0 0 10px;
+    padding: 0 0 5px;
+    font-size: 60px;
+    font-weight: 900;
+    background-size: cover;
+    background-position: bottom right;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hp-fade-in 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+    background-image: linear-gradient(
+      75deg,
+      rgba(254, 205, 235, 1) 0%,
+      rgba(9, 9, 121, 1) 45%,
+      rgba(51, 221, 255, 1) 100%
+    );
+    @include in_size($xxs) {
+      font-size: 45px;
+    }
+    @include in_size($xxxs) {
+      font-size: 35px;
+    }
+  }
+  [class$="__title-wrapper"] {
+    justify-content: flex-start;
   }
 }

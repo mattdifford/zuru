@@ -2,10 +2,10 @@ $xxxs: (
   max: 450px,
 );
 $xxs: (
-  max: 700px,
+  max: 767px,
 );
 $xs: (
-  max: 991px,
+  min: 768px,
 );
 $sm: (
   min: 992px,
@@ -15,6 +15,10 @@ $md: (
 );
 $lg: (
   min: 1460px,
+);
+$xs-only: (
+  min: map-get($xs, min),
+  max: map-get($sm, min) - 1,
 );
 $sm-only: (
   min: map-get($sm, min),

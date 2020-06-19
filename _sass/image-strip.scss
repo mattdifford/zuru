@@ -1,0 +1,31 @@
+.image-strip {
+  padding: 60px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center;
+  &__title {
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+    @include in_size($md) {
+      max-width: 75%;
+      margin: 0 auto;
+    }
+  }
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  @include in_size($xxs) {
+    &__title {
+      font-size: 50px;
+    }
+  }
+  @include in_size($xxxs) {
+    &__title {
+      font-size: 40px;
+    }
+  }
+}

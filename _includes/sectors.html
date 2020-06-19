@@ -1,0 +1,39 @@
+<section class="sectors-strip">
+    <div class="sectors-strip__top">
+        <div class="container">
+            <div class="sectors-strip__list">
+                {% for sector in site.data.sectors %}
+                <div>
+                    <h2 class="sectors-strip__item" data-sector="{{sector.title}}">{{sector.title}}</h2>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="sectors-strip__bottom">
+        <div class="sectors-strip__close">Close</div>
+        {% for sector in site.data.sectors %}
+        <div class="sectors-strip__sector" data-sector="{{sector.title}}">
+            <div class="container">
+                <div class="sectors-strip__sector-wrapper">
+                    <div class="sectors-strip__title-wrapper">
+                        <h3 class="sectors-strip__title">{{sector.text_title}}</h3>
+                    </div>
+                    <div class="sectors-strip__content">{{sector.content | markdownify}}</div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<script>
+    $('.sectors-strip__item').on("click", function (e) {
+        e.preventDefault();
+        $('.sectors-strip__close').addClass('active');
+        $('.sectors-strip__sector[data-sector="' + $(this).attr("data-sector") + '"]').addClass('active');
+    });
+    $('.sectors-strip__close').on("click", function (e) {
+        $(this).removeClass('active');
+        $('.sectors-strip__sector').removeClass('active');
+    });
+</script>
