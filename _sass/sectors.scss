@@ -77,11 +77,25 @@
     cursor: pointer;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out 0;
+    transition: opacity 0.3s ease-in-out 0s;
     &.active {
       transition: opacity 0.3s ease-in-out 0.75s;
       opacity: 1;
       pointer-events: auto;
+    }
+  }
+  @include in_size($mobile) {
+    &__title {
+      flex: 0 1 100%;
+      font-size: 30px;
+      margin: 0 0 25px;
+    }
+    &__item {
+      font-size: 35px;
+    }
+    &__content {
+      flex: 0 1 100%;
+      font-size: 17px;
     }
   }
 }

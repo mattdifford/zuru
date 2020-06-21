@@ -76,12 +76,24 @@
     span {
       margin-left: 10px;
       animation: bounce 2s infinite;
-      transition: transform 0.5s ease-in-out 0s
+      transition: transform 0.5s ease-in-out 0s;
     }
     &:hover {
       span {
         animation: none;
         transform: translateX(15px);
+      }
+    }
+  }
+  @include in_size($xxs) {
+    h1 {
+      .one,
+      .three {
+        font-size: 40px;
+      }
+      .two,
+      .four {
+        font-size: 55px;
       }
     }
   }
