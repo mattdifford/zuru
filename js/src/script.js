@@ -37,10 +37,12 @@ $(document).ready(function () {
     $('.header__menu-icon').on("click", function (e) {
         e.preventDefault();
         $('.menu').addClass('active');
+        $('body').addClass('menu-active');
     });
     $('.menu__close').on("click", function (e) {
         e.preventDefault();
         $('.menu').removeClass('active');
+        $('body').removeClass('menu-active');
     })
 });
 

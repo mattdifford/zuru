@@ -84,7 +84,9 @@ a {
     }
   }
 }
-
+body.menu-active {
+  overflow: hidden;
+}
 .menu {
   position: fixed;
   z-index: 4;
@@ -129,6 +131,8 @@ a {
         transition: all 0.7s ease-in-out 0.7s;
       }
       &__nav {
+        border-color: #fff;
+        transition: all 0.5s ease-in-out 0.7s;
         &-item {
           opacity: 1;
           transform: translateY(0);
@@ -156,7 +160,11 @@ a {
     counter-reset: menu-items;
     list-style: none;
     padding-right: 100px;
-    border-right: 1px solid #fff;
+    border-right: 1px solid #000;
+    transition: all 0.3s ease-in-out 0s;
+    &-list {
+      padding: 0;
+    }
     &-item {
       opacity: 0;
       transform: translateY(25px);
@@ -164,7 +172,7 @@ a {
       list-style: none;
     }
     &-link {
-      font-size: 100px;
+      font-size: 55px;
       text-decoration: none;
       font-weight: 400;
       line-height: 1.1;
@@ -213,10 +221,36 @@ a {
     text-decoration: none;
     font-weight: 600;
   }
-}
-
-.scrollwatch.delay {
-  transition-delay: 0.5s;
+  @include in_size($mobile) {
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    &__close {
+      font-size: 20px;
+    }
+    &__nav {
+      border-right: none;
+      border-bottom: 1px solid #000;
+      padding: 0 0 20px;
+      &-list {
+        margin: 20px 0 0;
+      }
+      &-link {
+        margin: 8px 0;
+        font-size: 25px;
+        &:before {
+          margin-right: 20px;
+          font-size: 16px;
+        }
+      }
+    }
+    &__content {
+      font-size: 20px;
+      height: auto;
+      padding: 20px 0 0;
+    }
+  }
 }
 
 .footer {
@@ -294,19 +328,19 @@ body.fade-out {
 }
 
 .split-content-strip {
-  [class$="__title"],
-  [class$="__subtitle"] {
+  [class*="__title"],
+  [class*="__subtitle"] {
     flex: 0 1 50%;
     @include in_size($xxs) {
       flex: 0 1 100%;
     }
   }
-  [class$="__title-wrapper"],
-  [class$="__subtitle-wrapper"] {
+  [class*="__title-wrapper"],
+  [class*="__subtitle-wrapper"] {
     display: flex;
     justify-content: flex-end;
   }
-  [class$="__title"] {
+  h3[class*="__title"] {
     margin: 0 0 10px;
     padding: 0 0 5px;
     font-size: 60px;
@@ -330,7 +364,18 @@ body.fade-out {
       font-size: 35px;
     }
   }
-  [class$="__title-wrapper"] {
+  [class*="__title-wrapper"] {
     justify-content: flex-start;
+  }
+}
+
+.scrollwatch {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 0.3s;
+  &.delay {
+    transition-delay: 0.7s;
+  }
+  &.scrolled {
+    opacity: 1;
   }
 }
