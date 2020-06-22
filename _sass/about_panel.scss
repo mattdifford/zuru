@@ -45,6 +45,7 @@
     opacity: 0;
     animation: hp-fade-in 0.5s ease-in-out 1.2s;
     animation-fill-mode: forwards;
+    margin-bottom: 100px;
   }
   @include in_size($sm-only) {
     &__title {

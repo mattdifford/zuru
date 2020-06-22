@@ -50,7 +50,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
+  background: #000;
   padding: 20px 0;
   position: absolute;
   z-index: 2;
@@ -75,6 +75,7 @@ a {
     }
   }
   &--light {
+    background: #fff;
     .header {
       &__menu-icon {
         &-inner {
