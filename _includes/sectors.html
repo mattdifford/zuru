@@ -4,7 +4,7 @@
             <div class="sectors-strip__list">
                 {% for sector in site.data.sectors %}
                 <div>
-                    <h2 class="sectors-strip__item" data-sector="{{sector.title}}">{{sector.title}}<span class="icon-arrow-right"></span></h2>
+                    <h2 class="sectors-strip__item"><a href="#sector_{{sector.title}}">{{sector.title}}</a></h2>
                 </div>
                 {% endfor %}
             </div>
@@ -13,7 +13,7 @@
     <div class="sectors-strip__bottom">
         <div class="sectors-strip__close">Close</div>
         {% for sector in site.data.sectors %}
-        <div class="sectors-strip__sector" data-sector="{{sector.title}}">
+        <div class="sectors-strip__sector" id="sector_{{sector.title}}">
             <div class="container">
                 <div class="sectors-strip__sector-wrapper">
                     <div class="sectors-strip__title-wrapper">
@@ -26,14 +26,3 @@
         {% endfor %}
     </div>
 </section>
-<script>
-    $('.sectors-strip__item').on("click", function (e) {
-        e.preventDefault();
-        $('.sectors-strip__close').addClass('active');
-        $('.sectors-strip__sector[data-sector="' + $(this).attr("data-sector") + '"]').addClass('active');
-    });
-    $('.sectors-strip__close').on("click", function (e) {
-        $(this).removeClass('active');
-        $('.sectors-strip__sector').removeClass('active');
-    });
-</script>

@@ -162,14 +162,21 @@ body.menu-active {
     padding-right: 100px;
     border-right: 1px solid #000;
     transition: all 0.3s ease-in-out 0s;
+    height: 100%;
     &-list {
       padding: 0;
+      margin: 0;
     }
     &-item {
       opacity: 0;
       transform: translateY(25px);
       transition: all 0.3s ease-in-out 0s;
       list-style: none;
+      &:first-child {
+        .menu__nav-link {
+          margin-top: 0;
+        }
+      }
     }
     &-link {
       font-size: 55px;

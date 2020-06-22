@@ -4,6 +4,17 @@
   background-repeat: no-repeat;
   height: 100vh;
   background-position: center;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(#000, 0.4);
+  }
   &__title {
     font-size: 70px;
     color: #fff;
@@ -14,6 +25,8 @@
     }
   }
   .container {
+    position: relative;
+    z-index: 3;
     height: 100%;
     display: flex;
     align-items: center;

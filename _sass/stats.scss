@@ -1,4 +1,7 @@
 .stats-strip {
+  height: 100vh;
+  display: flex;
+  align-items: center;
   &__list {
     display: flex;
     margin: 40px -20px 0;

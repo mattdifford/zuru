@@ -10,5 +10,5 @@ header_text: >
     Using next-generation technologies to connect you directly to more customers, we’ll plug you in to performance you’ve never previously thought possible. Day in, day out, from day one.
 strip_1:
     text: The performance marketing has changed the game forever
-    image: /images/laptop.jpg
+    image: /images/meeting.jpg
 ---
