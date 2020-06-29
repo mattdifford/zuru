@@ -1,0 +1,66 @@
+.body--features {
+  background: $colour_dark_grey;
+  .header {
+    background: none;
+  }
+}
+
+.features-list {
+  padding-top: 100px;
+  color: #fff;
+  &__item {
+    padding: 0 20px;
+    width: 50%;
+    &-inner {
+      background: #fff;
+      padding: 20px;
+      color: #000;
+      display: inline-block;
+      width: 100%;
+      text-decoration: none;
+      box-shadow: 0 3px 6px 0 rgba(#000, 0.16);
+    }
+    picture,
+    img {
+      max-width: 100%;
+    }
+  }
+  &__list {
+    padding-bottom: 50px;
+    position: relative;
+    .slick-arrow {
+      bottom: 10px;
+      position: absolute;
+      background: none;
+      border: none;
+      font-family: $font_primary;
+      font-size: 20px;
+      color: #fff;
+      &:before {
+        content: "\ea3c";
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: "icomoon" !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        
+        display:inline-block;
+      }
+    }
+    .slick-prev {
+      left: 0;
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+    .slick-next {
+      right: 0;
+    }
+  }
+}

@@ -349,7 +349,7 @@ body.fade-out {
 .split-content-strip {
   [class*="__title"],
   [class*="__subtitle"] {
-    flex: 0 1 50%;
+    flex: 0 1 51%;
     @include in_size($xxs) {
       flex: 0 1 100%;
     }
@@ -358,6 +358,7 @@ body.fade-out {
   [class*="__subtitle-wrapper"] {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
   }
   h3[class*="__title"] {
     margin: 0 0 10px;

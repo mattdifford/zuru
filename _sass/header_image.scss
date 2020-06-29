@@ -45,6 +45,13 @@
     opacity: 0;
     animation: hp-fade-in 0.5s ease-in-out 1.2s;
     animation-fill-mode: forwards;
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      + img {
+        margin-left: 15px;
+      }
+    }
   }
   @include in_size($sm-only) {
     &__title {

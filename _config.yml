@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: ZURU Group
+title_short: ZURU
 email: info@zurugroup.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.zurugroup.com" # the base hostname & protocol for your site, e.g. http://example.com
@@ -69,6 +70,14 @@ youtube_username: CHANGE ME
 plugins:
   - jekyll-include-cache
   - jekyll-webp
+  - jekyll-datapage-generator
+
+page_gen:
+  - index_files: false
+    data: features
+    template: featured
+    dir: features
+    name: title
 
 brands: 'vodafone,ou,vitality,o2,barclaycard,gus,apple,lgc,secret-escapes,afh,samsung,2u'
 wave_count: 4

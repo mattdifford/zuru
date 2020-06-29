@@ -4,15 +4,22 @@
             <h3 class="brands-strip__title">We do amazing things for amazing brands</h2>
         </div>
         <div class="brands-strip__subtitle-wrapper scrollwatch">
-            <p class="brands-strip__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis velit
-                sit
-                amet faucibus posuere. Etiam ipsum nulla, euismod tincidunt hendrerit non, condimentum non quam.</p>
+            <p class="brands-strip__subtitle">The brands we work with have the conviction to match their ambition. They
+                want more. Demand more. Expect more. From financial services to fast food, we hit peak performance when
+                our clients push us to take them places they’ve never thought possible.</p>
+            <p class="brands-strip__subtitle">And it’s always a two-way street. Commercial edge is underpinned by
+                complete trust – we invest just as
+                much into every campaign as our clients do, so we’re in it to win it together. By talking straight,
+                putting action before hesitation and setting targets that would fill others with dread, we’re helping
+                big names become bigger, and rising stars burn brighter than ever.</p>
+
+            <p class="brands-strip__subtitle"><em>The question is, are you up for the challenge?</em></p>
         </div>
         <div class="brands-strip__list scrollwatch">
             {% assign brands = site.brands | split: ',' %}
             {% for brand in brands %}
-                {%capture url%}/images/client-{{brand}}.png{%endcapture%}
-                <div class="brands-strip__item">{% include picture.html url=url alt=brand %}</div>
+            {%capture url%}/images/client-{{brand}}.png{%endcapture%}
+            <div class="brands-strip__item">{% include picture.html url=url alt=brand %}</div>
             {%endfor%}
         </div>
     </div>

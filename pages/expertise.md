@@ -5,10 +5,20 @@ permalink: /expertise
 title: Our Expertise
 header_title: We create disruptive campaigns for disruptive brands
 header_text: >
-    Forget middle of the road. Put mediocre firmly to one side. What ZURU Group promises you is hard-and-fast digital activation that gets you to the results you want. More quickly, more smartly and more cost-effectively than anyone else. It’s what we’ve excelled at for more than 20 years, but we’re still learning every day. And learning is where we’ll start with you. By really getting under the skin of your business, we’ll be your go-to gurus for multi-channel marketing, helping you conquer your toughest challenges with razor-sharp strategy and cutting-edge creativity.
+    If performance marketing is changing the commercial landscape for brands big and small, Zuru is changing the performance marketing world forever. We make campaigns more instant for you. Insight more actionable for you. And returns more attributable to every pound, euro or dollar you spend with us (and we spend ourselves in pursuit of your goals).
 
     
-    Using next-generation technologies to connect you directly to more customers, we’ll plug you in to performance you’ve never previously thought possible. Day in, day out, from day one.
+    **With us, you only pay for results. Results we guarantee you’ll want. And results we guarantee you’ll be delighted be.**
+
+    
+    We’re experts in the world’s leading marketing platform&hellip;
+    
+
+    ![Taboola](/images/taboola.png)
+    ![Outbrain](/images/outbrain.png)
+    ![Facebook](/images/facebook.png)
+    ![Google](/images/google.png)
+    ![Instagram](/images/instagram.png)
 strip_1:
     text: The performance marketing has changed the game forever
     image: /images/laptop.jpg

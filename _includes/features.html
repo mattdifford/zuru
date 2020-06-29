@@ -1,0 +1,18 @@
+<div class="features-list">
+    <div class="container">
+        <h1 class="features-list__title">Featured work</h1>
+        <div class="features-list__list">
+            {% for item in site.data.features %}
+            <div class="features-list__item">
+                <a class="features-list__item-inner" href="/features/{{title|slugify}}">
+                    <h2 class="features-list__item-title">{{item.title}}</h2>
+                    <p class="features-list__item-content">{{item.list_text}}</p>
+                    <div class="features-list__item-image">
+                        {% include picture.html url=item.list_image %}
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
