@@ -242,6 +242,7 @@ body.menu-active {
       border-bottom: 1px solid #000;
       padding: 0 0 20px;
       flex: 0 1 100%;
+      height: auto;
       &-list {
         margin: 20px 0 0;
       }
@@ -350,6 +351,9 @@ body.fade-out {
   [class*="__title"],
   [class*="__subtitle"] {
     flex: 0 1 51%;
+    @include in_size($xs) {
+      flex: 0 1 100%;
+    }
     @include in_size($xxs) {
       flex: 0 1 100%;
     }

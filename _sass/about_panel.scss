@@ -60,6 +60,14 @@
       flex: 0 1 100%;
     }
   }
+  @include in_size($xs) {
+    &__title {
+      font-size: 330px;
+    }
+    &__subtitle {
+      font-size: 58px;
+    }
+  }
   @include in_size($xxs) {
     &__title {
       font-size: 110px;
