@@ -351,9 +351,6 @@ body.fade-out {
   [class*="__title"],
   [class*="__subtitle"] {
     flex: 0 1 51%;
-    @include in_size($xs) {
-      flex: 0 1 100%;
-    }
     @include in_size($xxs) {
       flex: 0 1 100%;
     }
