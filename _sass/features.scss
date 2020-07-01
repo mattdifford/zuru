@@ -8,6 +8,10 @@
 
 .features-list {
   padding: 50px 0;
+  &__title {
+    font-family: $font_primary;
+    font-weight: 400;
+  }
   &__item {
     padding: 15px 10px;
     &-inner {
