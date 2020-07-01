@@ -30,28 +30,13 @@
     
     
     Maecenas commodo, sapien ut luctus hendrerit, nunc leo vestibulum dolor, sit amet commodo ante sem eu mi. Cras vehicula posuere urna sed vulputate. Donec maximus, risus non rhoncus elementum, erat purus rutrum ipsum, et fringilla velit ligula placerat magna. Fusce et magna congue, dapibus tellus at, hendrerit turpis. Phasellus erat diam, tincidunt nec mollis at, molestie a eros. Fusce egestas tortor et molestie blandit.
-- title: NewTradeSkills
+- title: Raize Gaming
   list_image: /images/life-sos-devices.png
-  logo: /images/nts.png
-  colour: "#eb5c27"
+  logo: /images/raize.png
+  colour: "#242038"
   contrast_colour: "#fff"
-- title: ProtectedHome
+- title: The Clubhouse
   list_image: /images/life-sos-devices.png
-  logo: /images/ph.png
-  colour: "#29abe2"
-  contrast_colour: "#fff"
-- title: ConnectedHome
-  list_image: /images/life-sos-devices.png
-  logo: /images/ch.png
-  colour: "#1b1464"
-  contrast_colour: "#fff"
-- title: WeAreSolar
-  list_image: /images/life-sos-devices.png
-  logo: /images/was.png
-  colour: "#2ac369"
-  contrast_colour: "#fff"
-- title: The Health Checker
-  list_image: /images/life-sos-devices.png
-  logo: /images/hc.png
-  colour: "#40e0d0"
-  contrast_colour: "#fff"
+  logo: /images/clubhouse.png
+  colour: "#fff"
+  contrast_colour: "#274756"

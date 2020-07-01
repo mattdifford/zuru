@@ -7,15 +7,19 @@
                 <div class="sectors-strip__sector-wrapper">
                     <div class="sectors-strip__title-wrapper">
                         <h3 class="sectors-strip__title">{{sector.title}}</h3>
-                        <p class="sectors-strip__type">{{sector.type}}</p>
-                        <p class="sectors-strip__definition">&ldquo;{{sector.definition}}&rdquo;</p>
+                        <div class="sectors-strip__type-wrapper">
+                            <p class="sectors-strip__type">{{sector.type}}</p>
+                        </div>
+                        <div class="sectors-strip__definition">
+                            <p class="sectors-strip__definition">&ldquo;{{sector.definition}}&rdquo;</p>
+                        </div>
                     </div>
                     <div class="sectors-strip__content">{{sector.content | markdownify}}</div>
                 </div>
             </div>
         </div>
         {% if forloop.index == 2 %}
-        {%- include image-strip.html image="/images/wall.jpg"-%}
+        {%- include image-strip.html image="/images/wall.jpg" text="Every decision we take together is another intelligent, measurable step towards your overall goals." -%}
         {% endif %}
         {% endfor %}
     </div>

@@ -39,16 +39,23 @@
     flex-wrap: wrap;
   }
   &__title {
+    font-family: $font_primary;
+    font-weight: 400;
     margin: 0;
   }
   &__type,
   &__definition {
-    flex: 0 1 51%;
     margin: 0;
+    flex: 0 1 30%;
+    &-wrapper {
+      display: flex;
+      flex: 0 1 100%;
+    }
   }
   &__type {
     font-style: italic;
     font-size: 16px;
+    margin-top: 20px;
   }
   &__definition {
     padding-right: 100px;
@@ -83,8 +90,13 @@
   &__content {
     flex: 0 1 50%;
     img {
+      margin-top: 40px;
       display: inline-block;
       vertical-align: middle;
+      @include in_size($md) {
+        max-width: 70%;
+        margin: 40px auto 0;
+      }
       + img {
         margin-left: 10px;
       }

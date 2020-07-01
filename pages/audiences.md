@@ -1,9 +1,9 @@
 ---
-layout: features
-description: Take a look at some of our favourite work
-permalink: /features
-title: Our Features
-header_title: A selection of award-winning campaigns
+layout: audiences
+description: Take a look at some of our audiences
+permalink: /audiences
+title: Our Audiences
+header_title: A selection of our audiences
 header_text: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et pharetra erat. Integer semper bibendum mi, a elementum neque vulputate in. Nulla iaculis pulvinar rutrum. Mauris dapibus est at neque viverra tempor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi aliquam hendrerit odio in ullamcorper. 
     

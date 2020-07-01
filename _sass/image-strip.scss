@@ -19,6 +19,14 @@
     font-size: 70px;
     color: #fff;
     text-align: center;
+    font-family: $font_primary;
+    font-weight: 400;
+    span {
+      display: block;
+      font-size: 30px;
+      margin-top: 30px;
+      text-align: right;
+    }
     @include in_size($md) {
       max-width: 75%;
       margin: 0 auto;
