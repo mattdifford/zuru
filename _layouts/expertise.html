@@ -7,7 +7,10 @@
         {% include_cached header.html %}
         <div id="main" class="scroll-container">
             {%- include header_image.html title=page.header_title text=page.header_text-%}
+            {%- include image-strip.html text=page.strip_1.text image=page.strip_1.image-%}
+            {%- include header_image-not-h1.html title=page.strip_2.title text=page.strip_2.text-%}
             {%- include sectors.html -%}
+            {%- include contact_strip.html text="Ready to change your marketing game?" link_text="Find out what we can do for you" -%}
         </div>
         {%- include_cached footer.html -%}
     </div>

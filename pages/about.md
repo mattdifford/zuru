@@ -17,4 +17,7 @@ header_text: >
 strip_1:
     text: Performance marketing has changed the game forever
     image: /images/meeting.jpg
+strip_2:
+    text: Want more.<br>Demand more.<br>Expect more
+    image: /images/people-line.jpg
 ---

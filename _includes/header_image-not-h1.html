@@ -1,8 +1,8 @@
-<section class="header-image{%if include.colour.size > 0%} header-image--has-colour" style="color:{{include.colour}}"{%else%}"{%endif%}>
+<section class="header-image header-image--not-h1">
     <div class="container">
         <div class="header-image__wrapper">
             <div class="header-image__title-wrapper">
-            <h1 class="header-image__title"{%if include.colour.size > 0%} style="color:{{include.colour}}"{%endif%}>{{include.title}}</h1>
+                <h2 class="header-image__title">{{include.title}}</h2>
             </div>
             <div class="header-image__content">
                 {{include.text | markdownify}}

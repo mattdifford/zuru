@@ -17,5 +17,14 @@
     <div class="menu__content">
         <address class="menu__address">{{site.title}}<br>{{site.address}}</address>
         <a href="mailto:{{site.email}}" class="menu__email">{{site.email}}</a>
+        <p class="menu__links">
+            <a href="/privacy-notice">Privacy notice</a>
+            <a title="Facebook" href="{{site.facebook_url | absolute_url}}" target="_blank"
+                rel="external noopener">Fb</a>
+            <a title="Twitter" href="{{site.twitter_url | absolute_url}}" target="_blank"
+                rel="external noopener">Tw</a>
+            <a title="Instagram" href="{{site.instagram_url | absolute_url}}" target="_blank"
+                rel="external noopener">Ig</a>
+        </p>
     </div>
 </div>

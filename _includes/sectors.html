@@ -1,15 +1,4 @@
 <section class="sectors-strip">
-    <div class="sectors-strip__top">
-        <div class="container">
-            <div class="sectors-strip__list">
-                {% for sector in site.data.sectors %}
-                <div>
-                    <h2 class="sectors-strip__item"><a href="#sector_{{sector.title}}">{{sector.title}}</a></h2>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
     <div class="sectors-strip__bottom">
         <div class="sectors-strip__close">Close</div>
         {% for sector in site.data.sectors %}
@@ -17,12 +6,17 @@
             <div class="container">
                 <div class="sectors-strip__sector-wrapper">
                     <div class="sectors-strip__title-wrapper">
-                        <h3 class="sectors-strip__title">{{sector.text_title}}</h3>
+                        <h3 class="sectors-strip__title">{{sector.title}}</h3>
+                        <p class="sectors-strip__type">{{sector.type}}</p>
+                        <p class="sectors-strip__definition">&ldquo;{{sector.definition}}&rdquo;</p>
                     </div>
                     <div class="sectors-strip__content">{{sector.content | markdownify}}</div>
                 </div>
             </div>
         </div>
+        {% if forloop.index == 2 %}
+        {%- include image-strip.html image="/images/wall.jpg"-%}
+        {% endif %}
         {% endfor %}
     </div>
 </section>

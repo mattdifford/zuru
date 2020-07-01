@@ -45,22 +45,51 @@ $(document).ready(function () {
         $('body').removeClass('menu-active');
     });
     $('.features-list__list').slick({
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 5,
+        slidesToScroll: 5,
         infinite: false,
-        dots: true,
         responsive: [
             {
+                breakpoint: 1460,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
                 breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 531,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 }
-            }
+            },
         ]
     })
 });
-
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("header_bar").style.transform = "translateY(0)";
+    } else {
+        document.getElementById("header_bar").style.transform = "translateY(-100%)";
+    }
+    prevScrollpos = currentScrollPos;
+}
 $.fn.serializeObject = function () {
     var o = {};
     var a = this.serializeArray();
@@ -77,29 +106,27 @@ $.fn.serializeObject = function () {
     return o;
 };
 
-let links = document.querySelectorAll('a');
+let links = $('body').find('a');
 if (links) {
-    links.forEach((link) => {
-        link.onclick = (e) => {
-            let body = document.querySelector('body');
-            if (!e.srcElement.parentElement.href) {
-                var href = e.srcElement.href;
-            } else {
-                var href = e.srcElement.parentElement.href;
-            }
-            var path = href.replace(window.location.origin + window.location.pathname, '');
-            if (path.charAt(0) != '#') {
-                e.preventDefault();
-                setTimeout(function () {
-                    if (body.classList.contains('fade-out')) {
-                        console.log('navigating');
-                        window.location = href;
-                    } else {
-                        console.log('whoops', e.srcElement.parentElement.href);
-                    }
-                }, 200);
-                body.classList.add('fade-out');
-            }
+    links.on("click", function () {
+        let body = document.querySelector('body');
+        if (!($(this).parent().attr("href"))) {
+            var href = $(this).attr("href");
+        } else {
+            var href = $(this).parent().attr("href");
+        }
+        var path = href.replace(window.location.origin + window.location.pathname, '');
+        if (path.charAt(0) == '/') {
+            e.preventDefault();
+            setTimeout(function () {
+                if (body.classList.contains('fade-out')) {
+                    console.log('navigating');
+                    window.location = href;
+                } else {
+                    console.log('whoops', e.srcElement.parentElement.href);
+                }
+            }, 200);
+            body.classList.add('fade-out');
         }
     })
 }

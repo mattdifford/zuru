@@ -52,8 +52,9 @@ a {
   width: 100%;
   background: #000;
   padding: 20px 0;
-  position: absolute;
-  z-index: 2;
+  position: fixed;
+  z-index: 4;
+  transition: transform 0.3s ease-in-out 0s;
   &__wrapper {
     display: flex;
     align-items: center;
@@ -93,7 +94,7 @@ body.menu-active {
   z-index: 4;
   pointer-events: none;
   opacity: 0;
-  background: #000;
+  background: #212121;
   top: 0;
   left: 0;
   width: 100%;
@@ -111,7 +112,7 @@ body.menu-active {
     top: 20px;
     left: 0;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 400;
     cursor: pointer;
     text-align: right;
     width: 100%;
@@ -163,7 +164,6 @@ body.menu-active {
     padding-right: 100px;
     border-right: 1px solid #000;
     transition: all 0.3s ease-in-out 0s;
-    height: 100%;
     &-list {
       padding: 0;
       margin: 0;
@@ -173,6 +173,7 @@ body.menu-active {
       transform: translateY(25px);
       transition: all 0.3s ease-in-out 0s;
       list-style: none;
+
       &:first-child {
         .menu__nav-link {
           margin-top: 0;
@@ -182,7 +183,7 @@ body.menu-active {
     &-link {
       font-size: 55px;
       text-decoration: none;
-      font-weight: 400;
+      font-weight: 300;
       line-height: 1.1;
       margin: 15px 0;
       display: inline-block;
@@ -215,19 +216,31 @@ body.menu-active {
     opacity: 0;
     transform: translateY(25px);
     padding-left: 100px;
-    height: 100%;
-    font-size: 36px;
+    font-size: 25px;
     transition: all 0.3s ease-in-out 0s;
   }
   &__address {
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
+  }
+  &__links {
+    font-size: 16px;
+    margin: 20px 0 0;
+    display: inline-block;
+    a {
+      text-decoration: none;
+      + a {
+        margin-left: 10px;
+      }
+    }
   }
   &__email {
     margin-top: 40px;
     display: block;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 400;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 4px;
   }
   @include in_size($mobile) {
     flex-wrap: wrap;
@@ -269,7 +282,7 @@ body.menu-active {
 }
 
 .footer {
-  padding: 40px 0;
+  padding: 10px 0;
   color: #fff;
   background: $colour_primary;
   &__top {
@@ -308,6 +321,7 @@ body.menu-active {
     &--address {
       p {
         font-size: 16px;
+        margin-bottom: 0;
       }
     }
     h3 {
@@ -398,5 +412,26 @@ body.fade-out {
   }
   &.scrolled {
     opacity: 1;
+  }
+}
+
+.contact-strip {
+  padding: 25px 0;
+  border-top: 10px solid #fff;
+  background: $colour_dark_grey;
+  color: #fff;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-family: $font_primary;
+    font-weight: 400;
+  }
+  &__link {
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 4px;
   }
 }

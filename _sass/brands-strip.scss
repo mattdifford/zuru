@@ -14,6 +14,18 @@
     margin: 25px 0;
     flex: 0 1 25%;
   }
+  &__subtitle {
+    a {
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 2px;
+      transition: color 0.2s ease-in-out 0s;
+      line-height: 1.6;
+      &:hover {
+        color: rgba(9, 9, 121, 1);
+      }
+    }
+  }
   img,
   picture {
     max-width: 100%;

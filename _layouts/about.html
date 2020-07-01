@@ -10,7 +10,7 @@
             {%- include image-strip.html text=page.strip_1.text image=page.strip_1.image-%}
             {%- include_cached team.html -%}
             {%- include_cached stats.html -%}
-            {%- include image-strip.html image="/images/people-line.jpg" -%}
+            {%- include image-strip.html image=page.strip_2.image text=page.strip_2.text-%}
             {%- include_cached brands.html -%}
         </div>
         {%- include_cached footer.html -%}

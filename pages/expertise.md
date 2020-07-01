@@ -9,17 +9,14 @@ header_text: >
 
     
     **With us, you only pay for results. Results we guarantee you’ll want. And results we guarantee you’ll be delighted be.**
-
-    
-    We’re experts in the world’s leading marketing platform&hellip;
-    
-
-    ![Taboola](/images/taboola.png)
-    ![Outbrain](/images/outbrain.png)
-    ![Facebook](/images/facebook.png)
-    ![Google](/images/google.png)
-    ![Instagram](/images/instagram.png)
 strip_1:
-    text: The performance marketing has changed the game forever
-    image: /images/laptop.jpg
+    text: Performance marketing has changed the game forever
+    image: /images/meeting.jpg
+strip_2:
+    title: Our methodology
+    text: >
+        Pellentesque sem augue, lacinia ut neque eu, tempor dapibus dolor. Suspendisse quis ex feugiat, tristique nisl a, viverra mi. Donec hendrerit consequat urna, id semper enim vulputate ut. Nulla facilisi. Duis facilisis lorem diam, ac interdum ipsum venenatis nec. Fusce at consequat nulla. Nulla et ipsum ipsum. In varius elit quis dictum interdum.
+
+        
+        Praesent lorem nisi, elementum in massa a, auctor vestibulum lectus. Cras sed tempor purus. Pellentesque scelerisque a orci at accumsan. Etiam mattis justo sit amet lectus elementum ornare. Integer quis eros risus. Aliquam malesuada dictum eros, non vestibulum risus viverra sed. Nunc faucibus, nisl a convallis fermentum, eros dui euismod lectus, vitae mollis orci orci et dolor. Nam diam turpis, rutrum at tellus sit amet, auctor maximus dolor. Sed dolor lectus, imperdiet non ligula eu, posuere sagittis massa. Fusce eu pellentesque quam. Cras vel blandit ante, sed tempor lorem.
 ---

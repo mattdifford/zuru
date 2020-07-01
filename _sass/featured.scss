@@ -1,0 +1,48 @@
+.featured-work {
+  &__title {
+    margin: 0;
+    flex: 0 1 40%;
+    font-size: 60px;
+    font-family: $font_primary;
+    font-weight: 400;
+    &-wrapper {
+      display: flex;
+      flex: 0 1 100%;
+    }
+  }
+  &__content {
+    flex: 0 1 60%;
+  }
+  &__strip {
+    padding: 60px 0;
+    background: $colour_dark_grey;
+    color: #fff;
+    // &:nth-child(even) {
+    // }
+    // &:nth-child(odd) {
+    //   background: #fff;
+    //   color: $colour_dark_grey;
+    // }
+    &-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+  }
+  @include in_size($mobile) {
+    &__title,
+    &__content {
+      flex: 0 1 100%;
+    }
+  }
+}
+
+.featured-image {
+  padding: 70px 0;
+  text-align: center;
+  background: #fff;
+  picture,
+  img {
+    max-width: 100%;
+  }
+}

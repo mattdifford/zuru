@@ -6,6 +6,7 @@
     <div class="body-wrapper">
         {% include_cached header.html %}
         <div id="main" class="scroll-container">
+            {%- include header_image.html title=page.header_title text=page.header_text-%}
             {%- include features.html -%}
         </div>
         {%- include_cached footer.html -%}
