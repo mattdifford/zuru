@@ -19,6 +19,8 @@
       animation: fade-in 0.5s ease-in-out 0s;
       animation-fill-mode: forwards;
       color: #000;
+      font-family: $font_primary;
+      font-weight: 400;
       &.two,
       &.four {
         font-weight: 900;
