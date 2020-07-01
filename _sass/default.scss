@@ -226,7 +226,7 @@ body.menu-active {
   &__links {
     font-size: 16px;
     margin: 20px 0 0;
-    display: inline-block;
+    display: block;
     a {
       text-decoration: none;
       + a {
@@ -236,7 +236,7 @@ body.menu-active {
   }
   &__email {
     margin-top: 40px;
-    display: block;
+    display: inline-block;
     text-decoration: none;
     font-weight: 400;
     border-bottom: 1px solid #fff;
