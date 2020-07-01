@@ -162,7 +162,7 @@ body.menu-active {
     counter-reset: menu-items;
     list-style: none;
     padding-right: 100px;
-    border-right: 1px solid #000;
+    border-right: 1px solid transparent;
     transition: all 0.3s ease-in-out 0s;
     &-list {
       padding: 0;
