@@ -89,6 +89,10 @@
   }
   &__content {
     flex: 0 1 50%;
+    img,
+    picture {
+      max-width: 100%;
+    }
     img {
       margin-top: 40px;
       display: inline-block;
@@ -123,6 +127,11 @@
     }
   }
   @include in_size($mobile) {
+    &__type,
+    &__definition {
+      padding: 0;
+      flex: 0 1 100%;
+    }
     &__title {
       flex: 0 1 100%;
       font-size: 30px;
