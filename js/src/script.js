@@ -78,6 +78,34 @@ $(document).ready(function () {
                 }
             },
         ]
+    });
+    $('.journal__list').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 531,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
     })
 });
 var prevScrollpos = window.pageYOffset;

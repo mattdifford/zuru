@@ -1,0 +1,42 @@
+- title: lifeSOS
+  featured_image: /images/life-sos-devices.png
+  logo: /images/life-sos.png
+  colour: "#34eba5"
+  contrast_colour: "#fff"
+  quote: "&ldquo;These guys are really good&rdquo;<span>James Eccles - lifeSOS CEO</span>"
+  strip_image: /images/laptop-floor.jpg
+  header_text: >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus quis risus et tempus. Donec laoreet tortor at odio aliquam consequat. Suspendisse vel felis sed arcu convallis ultrices. 
+    
+    
+    Nam bibendum eu mauris quis dapibus. Maecenas finibus massa at semper interdum.
+  brief: >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus quis risus et tempus. Donec laoreet tortor at odio aliquam consequat. Suspendisse vel felis sed arcu convallis ultrices. Nam bibendum eu mauris quis dapibus. Maecenas finibus massa at semper interdum. Nulla quis justo aliquam tellus pharetra congue feugiat et massa. Etiam in enim ut purus faucibus dapibus ut sed massa. Curabitur aliquam turpis ac diam congue feugiat. Proin luctus metus at nisi pharetra, ut finibus eros sollicitudin. Nam consectetur sapien in est eleifend volutpat. 
+    
+    
+    Maecenas commodo, sapien ut luctus hendrerit, nunc leo vestibulum dolor, sit amet commodo ante sem eu mi. Cras vehicula posuere urna sed vulputate. Donec maximus, risus non rhoncus elementum, erat purus rutrum ipsum, et fringilla velit ligula placerat magna. Fusce et magna congue, dapibus tellus at, hendrerit turpis. Phasellus erat diam, tincidunt nec mollis at, molestie a eros. Fusce egestas tortor et molestie blandit.
+  strategy: >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus quis risus et tempus. Donec laoreet tortor at odio aliquam consequat. Suspendisse vel felis sed arcu convallis ultrices. Nam bibendum eu mauris quis dapibus. Maecenas finibus massa at semper interdum. Nulla quis justo aliquam tellus pharetra congue feugiat et massa. Etiam in enim ut purus faucibus dapibus ut sed massa. Curabitur aliquam turpis ac diam congue feugiat. Proin luctus metus at nisi pharetra, ut finibus eros sollicitudin. Nam consectetur sapien in est eleifend volutpat.
+    
+    
+    Maecenas commodo, sapien ut luctus hendrerit, nunc leo vestibulum dolor, sit amet commodo ante sem eu mi. Cras vehicula posuere urna sed vulputate. Donec maximus, risus non rhoncus elementum, erat purus rutrum ipsum, et fringilla velit ligula placerat magna. Fusce et magna congue, dapibus tellus at, hendrerit turpis. Phasellus erat diam, tincidunt nec mollis at, molestie a eros. Fusce egestas tortor et molestie blandit.
+  campaign: >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus quis risus et tempus. Donec laoreet tortor at odio aliquam consequat. Suspendisse vel felis sed arcu convallis ultrices. Nam bibendum eu mauris quis dapibus. 
+    
+    
+    Maecenas finibus massa at semper interdum. Nulla quis justo aliquam tellus pharetra congue feugiat et massa. Etiam in enim ut purus faucibus dapibus ut sed massa. Curabitur aliquam turpis ac diam congue feugiat. Proin luctus metus at nisi pharetra, ut finibus eros sollicitudin. Nam consectetur sapien in est eleifend volutpat. Maecenas commodo, sapien ut luctus hendrerit, nunc leo vestibulum dolor, sit amet commodo ante sem eu mi. Cras vehicula posuere urna sed vulputate. Donec maximus, risus non rhoncus elementum, erat purus rutrum ipsum, et fringilla velit ligula placerat magna. Fusce et magna congue, dapibus tellus at, hendrerit turpis. Phasellus erat diam, tincidunt nec mollis at, molestie a eros. Fusce egestas tortor et molestie blandit.
+  performance: >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus quis risus et tempus. Donec laoreet tortor at odio aliquam consequat. Suspendisse vel felis sed arcu convallis ultrices. Nam bibendum eu mauris quis dapibus. Maecenas finibus massa at semper interdum. Nulla quis justo aliquam tellus pharetra congue feugiat et massa. Etiam in enim ut purus faucibus dapibus ut sed massa. Curabitur aliquam turpis ac diam congue feugiat. Proin luctus metus at nisi pharetra, ut finibus eros sollicitudin. Nam consectetur sapien in est eleifend volutpat. 
+    
+    
+    Maecenas commodo, sapien ut luctus hendrerit, nunc leo vestibulum dolor, sit amet commodo ante sem eu mi. Cras vehicula posuere urna sed vulputate. Donec maximus, risus non rhoncus elementum, erat purus rutrum ipsum, et fringilla velit ligula placerat magna. Fusce et magna congue, dapibus tellus at, hendrerit turpis. Phasellus erat diam, tincidunt nec mollis at, molestie a eros. Fusce egestas tortor et molestie blandit.
+- title: Raize Gaming
+  list_image: /images/life-sos-devices.png
+  logo: /images/raize.png
+  colour: "#242038"
+  contrast_colour: "#fff"
+- title: The Clubhouse
+  list_image: /images/life-sos-devices.png
+  logo: /images/clubhouse.png
+  colour: "#fff"
+  contrast_colour: "#274756"

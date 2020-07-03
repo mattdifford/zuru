@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+{%-include head.html-%}
+
+<body class="fade-out body--pitching">
+    <div class="body-wrapper">
+        {% include_cached header.html %}
+        {%- include header_image.html title=page.header_title text=page.header_text-%}
+        {% include_cached pitches.html %}
+        {% include_cached pitching_form.html %}
+        {%- include_cached footer.html -%}
+    </div>
+    {%- include foot.html layout=page.layout -%}
+</body>
+
+</html>

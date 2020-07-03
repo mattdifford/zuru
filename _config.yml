@@ -83,6 +83,11 @@ page_gen:
     template: featured
     dir: audiences
     name: title
+  - index_files: false
+    data: pitches
+    template: featured
+    dir: pitches
+    name: title
 
 brands: 'vodafone,ou,vitality,o2,barclaycard,gus,apple,lgc,secret-escapes,afh,samsung,2u'
 wave_count: 4

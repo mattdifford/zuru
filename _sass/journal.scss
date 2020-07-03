@@ -1,51 +1,29 @@
-.body--features {
-  background: $colour_dark_grey;
+.journal {
+  padding-top: 130px;
   color: #fff;
-  .header {
-    background: $colour_dark_grey;
-  }
-}
-
-.features-list {
-  padding: 50px 0;
-  &__title {
-    font-family: $font_primary;
-    font-weight: 400;
-  }
-  &__item {
-    padding: 15px 10px;
-    &-inner {
-      background: #fff;
-      padding: 60px 20px;
-      color: #000;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      width: 100%;
-      text-decoration: none;
-      box-shadow: 0 3px 6px 0 rgba(#000, 0.16);
-      border-radius: 14px;
-      transition: transform 0.3s ease-in-out 0s;
-      h2 {
-        margin: 0 0 25px;
-        font-family: $font_primary;
-        font-weight: 400;
-        height: 60px;
-      }
-      &:hover {
-        transform: translateY(-15px);
-      }
+  &__featured {
+    display: flex;
+    flex-wrap: wrap;
+    &-title {
+      flex: 0 1 100%;
+      font-size: 50px;
+      margin: 0 0 25px;
     }
-    picture,
-    img {
-      max-height: 32px;
-      display: inline-block;
+    &-thumb {
+      flex: 0 1 60%;
+    }
+    &-description {
+      flex: 0 1 40%;
+      padding-left: 50px;
     }
   }
   &__list {
-    padding-bottom: 75px;
     position: relative;
+    padding-bottom: 75px;
+    margin-top: 40px;
+    &-item {
+      padding: 0 20px;
+    }
     .slick-dots {
       position: absolute;
       bottom: 10px;
@@ -94,6 +72,7 @@
       text-align: center;
       overflow: hidden;
       padding: 0;
+      cursor: pointer;
       &.slick-disabled {
         opacity: 0.3;
         cursor: default;
@@ -130,9 +109,20 @@
       right: 20px;
     }
   }
+  @include in_size($mobile) {
+    &__featured {
+      &-thumb,
+      &-description {
+        flex: 0 1 100%;
+        padding: 0;
+      }
+    }
+  }
   @include in_size($xxxs) {
-    &__item {
-      padding: 0;
+    &__list {
+      &-item {
+        padding: 0;
+      }
     }
   }
 }

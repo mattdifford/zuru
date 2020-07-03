@@ -242,6 +242,45 @@ body.menu-active {
     border-bottom: 1px solid #fff;
     padding-bottom: 4px;
   }
+  &__small {
+    &-nav {
+      &-list {
+        margin: 25px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      &-item {
+      }
+      &-link {
+        font-size: 18px;
+        display: inline-block;
+        text-decoration: none;
+        &:after {
+          content: "";
+          display: block;
+          width: calc(100% - 25px);
+          margin-left: 25px;
+          height: 1px;
+          margin-top: 5px;
+          background: currentColor;
+          transform: scaleX(0);
+          transition: transform 0.3s ease-in-out 0s;
+          transform-origin: left;
+        }
+        &:before {
+          counter-increment: menu-items;
+          content: counter(menu-items) ". ";
+          margin-right: 10px;
+          font-size: 14px;
+        }
+        &:hover {
+          &:after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
   @include in_size($mobile) {
     flex-wrap: wrap;
     padding: 20px;

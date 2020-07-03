@@ -1,0 +1,33 @@
+<div class="journal">
+    {% if site.data.videos.size > 1 %}
+    <div class="container">
+        {% assign first = site.data.videos[0] %}
+        {% capture first_image_url %}https://img.youtube.com/vi/{{first.id}}/maxresdefault.jpg{% endcapture %}
+        {% capture first_url %}https://www.youtube.com/watch?v={{first.id}}{% endcapture %}
+        <div class="journal__featured">
+            <h3 class="journal__featured-title">{{first.title}}</h3>
+            <a class="journal__featured-thumb" target="_blank" rel="external noopener" href="{{first_url}}">
+                <img src="{{first_image_url}}" alt="{{first.title}}" />
+            </a>
+            <div class="journal__featured-description">{{first.description | markdownify }}</div>
+        </div>
+        {% if site.data.videos.size > 1 %}
+        <div class="journal__list">
+            {% for video in site.data.videos %}
+            {% if forloop.index > 1 %}
+            {% capture image_url %}https://img.youtube.com/vi/{{video.id}}/hqdefault.jpg{% endcapture %}
+            {% capture url %}https://www.youtube.com/watch?v={{video.id}}{% endcapture %}
+            <div class="journal__list-item">
+                <h3 class="journal__list-item-title">{{video.title}}</h3>
+                <a class="journal__list-item-thumb" target="_blank" rel="external noopener" href="{{url}}">
+                    <img src="{{image_url}}" alt="{{video.title}}" />
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+    </div>
+    {% endif %}
+</div>

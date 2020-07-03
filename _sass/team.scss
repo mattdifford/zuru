@@ -24,10 +24,6 @@
     }
     &-image {
       transition: opacity 0.2s ease-in-out 0s;
-      picture,
-      img {
-        max-width: 100%;
-      }
       img {
         border-radius: 50%;
         overflow: hidden;

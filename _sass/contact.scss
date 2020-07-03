@@ -18,6 +18,15 @@
     font-family: $font_primary;
     font-weight: 400;
   }
+  &__content {
+    color: #fff;
+  }
+  &--pitch {
+    iframe {
+      top: 250px;
+      height: calc(100% - 250px);
+    }
+  }
 }
 
 .body--contact {
