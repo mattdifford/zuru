@@ -47,6 +47,10 @@
     opacity: 0;
     animation: hp-fade-in 0.5s ease-in-out 1.2s;
     animation-fill-mode: forwards;
+    a {
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+    }
   }
   &--not-h1 {
     background: #fff;
