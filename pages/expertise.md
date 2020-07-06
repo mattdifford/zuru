@@ -15,19 +15,14 @@ strip_1:
 strip_2:
     title: Our methodology
     text: >
-        Pellentesque sem augue, lacinia ut neque eu, tempor dapibus dolor. Suspendisse quis ex feugiat, tristique nisl a, viverra mi. Donec hendrerit consequat urna, id semper enim vulputate ut. Nulla facilisi. Duis facilisis lorem diam, ac interdum ipsum venenatis nec. Fusce at consequat nulla. Nulla et ipsum ipsum. In varius elit quis dictum interdum.
+        Tried, tested, proven – our approach to every project is based on a methodology that works. And works well. Based on four key pillars – strategy, content, creative and technology – it’s demonstrated its success time and again, for clients around the world, in the most competitive markets and with the most challenging of targets.
 
         
-        Praesent lorem nisi, elementum in massa a, auctor vestibulum lectus. Cras sed tempor purus. Pellentesque scelerisque a orci at accumsan. Etiam mattis justo sit amet lectus elementum ornare. Integer quis eros risus. Aliquam malesuada dictum eros, non vestibulum risus viverra sed. 
+        We’ll start with your business and the audiences you want to reach, getting under the skin of both to understand what will work (and what won’t). We’ll use socio-demographics and a deep understanding of consumer behaviour to identify who your prospects are, what they want, what they like and what’s going to drive them to action, all the while mapping that against what you aim to achieve.
+
         
+        Then comes content and creative. For you, that means cut-through and clarity, with ideas that are braver, brighter and always big on engagement. 
+
         
-        Nunc faucibus, nisl a convallis fermentum, eros dui euismod lectus, vitae mollis orci orci et dolor. Nam diam turpis, rutrum at tellus sit amet, auctor maximus dolor. Sed dolor lectus, imperdiet non ligula eu, posuere sagittis massa. Fusce eu pellentesque quam. Cras vel blandit ante, sed tempor lorem.
-
-        * Strategy
-
-        * Content
-
-        * Creative 
-
-        * Technology
+        Technology is the enabler of it all. Using state-of-the-art proprietary marketing technology, your campaigns are brought to life, with every action, engagement and outcome monitored and optimised in real-time.
 ---

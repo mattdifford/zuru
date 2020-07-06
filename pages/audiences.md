@@ -5,8 +5,14 @@ permalink: /audiences
 title: Our Audiences
 header_title: A selection of our audiences
 header_text: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et pharetra erat. Integer semper bibendum mi, a elementum neque vulputate in. Nulla iaculis pulvinar rutrum. Mauris dapibus est at neque viverra tempor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi aliquam hendrerit odio in ullamcorper. 
+    At Zuru, we don’t just go out there and find audiences for you. We’re constantly building our own, giving you a ready-made pool of hyper-engaged prospects to target.
+
     
+    Through our LifeSOS brand, we’re deepening our understanding of what consumers need, and when they need it, across all aspects of their lives. By harnessing the growing power of artificial intelligence, we’re redefining customer acquisition, based on what people actually need, rather than cost alone.
+
     
-    Nunc molestie mattis dolor at hendrerit. Ut eget risus mollis, bibendum lacus vitae, molestie turpis. Phasellus libero turpis, placerat eu cursus in, vulputate in odio. Aenean id venenatis libero, in maximus neque. Nulla cursus condimentum ligula, vel interdum ante rutrum quis. Aliquam ultrices arcu ligula, in mollis magna feugiat eu.
+    Two further platforms – Raize and The Clubhouse – give you direct access to high-value, ever-engaged audiences drawn from the flourishing worlds of sport, social media, eSports and online gaming. 
+
+    
+    With an innate understanding of each of these prospect groups, we’re able to focus more sharply on what’s going to work with them, delivering real-time engagement and more effective organic customer acquisition for you.
 ---
