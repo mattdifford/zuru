@@ -106,6 +106,15 @@ $(document).ready(function () {
                 }
             },
         ]
+    });
+    $('.yt-iframe').on("click", function (e) {
+        e.preventDefault();
+        var html = '<div class="video-overlay"><a class="video-overlay__close" href="#">Close</a><iframe src="https://www.youtube.com/embed/' + $(this).attr('data-yt-id') + '?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
+        $('body').addClass('iframe').append(html);
+    });
+    $('body').on("click", ".video-overlay__close", function (e) {
+        e.preventDefault();
+        $('body').removeClass('iframe').find('.video-overlay').remove();
     })
 });
 var prevScrollpos = window.pageYOffset;
