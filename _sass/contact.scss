@@ -1,7 +1,7 @@
 .contact-form-strip {
   min-height: 100vh;
   padding-top: 100px;
-  iframe {
+  .typeform-widget {
     border: none;
     position: absolute;
     top: 200px;
@@ -22,7 +22,7 @@
     color: #fff;
   }
   &--pitch {
-    iframe {
+    .typeform-widget {
       top: 250px;
       height: calc(100% - 250px);
     }
