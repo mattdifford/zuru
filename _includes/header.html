@@ -7,11 +7,13 @@
             {%assign url = "/images/logo.png" %}
             {% endif %}
             <a class="header__logo" href="/">{% include picture.html url=url alt=site.title %}</a>
+            {% if include.no_menu != true%}
             <div class="header__menu-icon">
                 <span class="header__menu-icon-inner"></span>
                 <span class="header__menu-icon-inner"></span>
                 <span class="header__menu-icon-inner"></span>
             </div>
+            {% endif %}
         </div>
     </div>
 </div>
