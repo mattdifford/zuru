@@ -1,12 +1,7 @@
 <div class="header{%if include.light%} header--light{%endif%}" id="header_bar">
     <div class="container">
         <div class="header__wrapper">
-            {% if include.light == true %}
-            {%assign url = "/images/logo-light.png" %}
-            {% else %}
-            {%assign url = "/images/logo.png" %}
-            {% endif %}
-            <a class="header__logo" href="/">{% include picture.html url=url alt=site.title %}</a>
+            <a class="header__logo" href="/"><img src="/images/logo.svg" alt="{{site.title}}"/></a>
             <div class="header__menu-icon">
                 <span class="header__menu-icon-inner"></span>
                 <span class="header__menu-icon-inner"></span>

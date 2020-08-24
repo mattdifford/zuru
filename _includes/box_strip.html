@@ -1,0 +1,11 @@
+<div class="box-strip{%if include.dark==true%} box-strip--dark{%endif%}{%if include.image.size>0%} box-strip--image" style="background-image:url('{{include.image}}')"{%else%}"{%endif%}>
+    <div class="container">
+        <div class="box-strip__wrapper">
+            <div class="box-strip__inner scrollwatch">
+                <div class="box-strip__corners box-strip__corners--top"></div>
+                <h3 class="box-strip__text">{{include.text}}</h3>
+                <div class="box-strip__corners box-strip__corners--bottom"></div>
+            </div>
+        </div>
+    </div>
+</div>

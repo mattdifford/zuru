@@ -1,3 +1,17 @@
+- title: Methodology
+  type: noun
+  definition: a system of methods used in a particular area of study or activity
+  content: >
+    Tried, tested, proven – our approach to every project is based on a methodology that works. And works well. Based on four key pillars – strategy, content, creative and technology – it's demonstrated its success time and again, for clients around the world, in the most competitive markets and with the most challenging of targets.
+
+
+    We'll start with your business and the audiences you want to reach, getting under the skin of both to understand what will work (and what won't). We'll use socio-demographics and a deep understanding of consumer behaviour to identify who your prospects are, what they want, what they like and what's going to drive them to action, all the while mapping that against what you aim to achieve.
+
+
+    Then comes content and creative. For you, that means cut-through and clarity, with ideas that are braver, brighter and always big on engagement. 
+
+
+    Technology is the enabler of it all. Using state-of-the-art proprietary marketing technology, your campaigns are brought to life, with every action, engagement and outcome monitored and optimised in real-time.
 - title: Strategy
   type: noun
   definition: a plan of action designed to achieve a long-term or overall aim.
@@ -7,9 +21,9 @@
 
     The result is performance-focused, digital acquisition activity that gets you were you want to be – and beyond.
 
-    
+
     We're experts in the world's leading marketing platforms&hellip;
-    
+
 
     ![Taboola](/images/taboola.png)
     ![Outbrain](/images/outbrain.png)
@@ -19,10 +33,8 @@
 - title: Content
   type: noun
   definition: the ideas that are contained within a piece of creative work
+  curve_type: "large"
   content: >
-    In today's multimedia world, the key word when it comes to content is authenticity. For people to respond to your content, it must feel real to them and reflect their hopes, dreams, ambitions and aspirations. So gone are the days of hyper-expensive glossy ads. We have the in-house capability to create content that works in every digital medium and across every digital marketing platform. From film to display advertising, and from personalised web content to AR-powered experiences, the content we deliver is intelligent, intuitive and fully integrated with your sales processes.
-
-
     In today's multimedia world, the key word when it comes to content is authenticity. For people to respond to your content, it must feel real to them and reflect their hopes, dreams, ambitions and aspirations. So gone are the days of hyper-expensive glossy ads. We have the in-house capability to create content that works in every digital medium and across every digital marketing platform. From film to display advertising, and from personalised web content to AR-powered experiences, the content we deliver is intelligent, intuitive and fully integrated with your sales processes.
 - title: Creative
   type: noun
@@ -34,13 +46,14 @@
 
     Cut-through creative with cold, hard commercial purpose. That's what we give you. Our creative marketing is designed to reach heads and hearts, driving the response and results you're looking for. And it's ready to go in an instant – we aren't interested in creative that loses its potency after months in the planning. Instead, our work is real-time, responsive and never afraid to provoke the right reaction.
 - title: Technology
-  type: noun 
-  definition: the application of scientific knowledge for practical purposes, especially in industry.
+  type: noun
+  definition: the application of scientific knowledge for practical purposes, especially in industry
+  curve_type: "wide"
   content: >
     The effectiveness of the technology we use lies in its simplicity. It simply works. And that means we spend less time building sites or maintaining platforms and much more time running and refining the campaigns that generate bottom-line value for you.
 
-    
+
     The websites we build for your campaigns are conceived and created to drive conversion, with fast loading times and responsive designs delivered as standard. And our own ZuruIQ platform allows us to optimise campaigns instantly, giving your internal teams constant access to critical data. So every decision we take together isn't just informed – it's another intelligent, measurable step towards your overall goals.
 
-    
+
     ![Technology](/images/life-sos-devices.png)

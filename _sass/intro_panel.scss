@@ -1,9 +1,80 @@
 .intro-panel {
-  background: #f7f7f7;
-  padding: 100px 0;
+  color: $colour_primary;
+  background: #fff;
+  padding: 150px 0;
+  position: relative;
+  overflow: hidden;
   &__title {
-    font-size: 90px;
-    font-weight: 600;
-    margin: 0 0 50px;
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0;
+    flex: 0 1 40%;
+    padding-right: 100px;
+    line-height: 1.2;
+  }
+  &__text {
+    flex: 0 1 60%;
+    padding-left: 50px;
+    font-weight: 300;
+    font-size: 26px;
+  }
+  &__title,
+  &__text {
+    position: relative;
+    z-index: 2;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__curve {
+    position: absolute;
+    bottom: 0;
+    @include svg_path_animate(985);
+    svg {
+      float: left;
+    }
+    path {
+      stroke: $colour_accent;
+    }
+  }
+  &--curve-right {
+    .intro-panel {
+      &__title {
+        display: flex;
+        &:before {
+          content: "";
+          width: 24px;
+          height: 44px;
+          display: inline-block;
+          background: url("/images/link_arrow.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin: 10px 20px 0 0;
+          transform: translateX(-10px);
+          opacity: 0;
+          transition: all 0.5s ease-in-out 1s;
+        }
+        &.scrolled {
+          &:before {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+      }
+      &__curve {
+        right: 0;
+      }
+    }
+  }
+  &--curve-left {
+    .intro-panel {
+      &__curve {
+        left: 0;
+        transform: rotate(90deg);
+        max-height: 80%;
+      }
+    }
   }
 }

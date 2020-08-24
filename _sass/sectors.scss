@@ -38,15 +38,47 @@
   &__title-wrapper {
     flex-wrap: wrap;
   }
+  &__title-wrapper,
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
   &__title {
     font-family: $font_primary;
-    font-weight: 400;
+    font-weight: 500;
     margin: 0;
+    font-size: 60px;
+    display: inline-flex;
+    align-items: center;
+    color: $colour_med_grey;
+    &:before {
+      content: "";
+      width: 24px;
+      height: 44px;
+      display: block;
+      background: url("/images/link_arrow.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 20px;
+      transform: translateX(-10px);
+      opacity: 0;
+      transition: all 0.5s ease-in-out 1s;
+    }
+    &.scrolled {
+      &:before {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    &-wrapper {
+      display: flex;
+      flex: 0 1 50%;
+    }
   }
   &__type,
   &__definition {
     margin: 0;
-    flex: 0 1 30%;
     &-wrapper {
       display: flex;
       flex: 0 1 100%;
@@ -56,66 +88,187 @@
     font-style: italic;
     font-size: 16px;
     margin-top: 20px;
+    font-weight: 300;
   }
   &__definition {
     padding-right: 100px;
+    font-size: 26px;
+    p {
+      margin: 0;
+    }
   }
   &__sector {
     width: 100%;
-    min-height: 100vh;
     z-index: 2;
     display: flex;
     align-items: center;
-    padding: 40px 0;
-    &:nth-child(even) {
-      background: $colour_dark_grey;
-    }
-    &:nth-child(odd) {
-      background: #fff;
-      color: $colour_dark_grey;
-    }
+    position: relative;
+    overflow: hidden;
+    color: #070606;
     &-wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-end;
+      position: relative;
+      align-items: flex-start;
+      padding: 100px 0;
+    }
+    &--methodology {
+      color: #fff;
+      .sectors-strip {
+        &__sector {
+          &-wrapper {
+            justify-content: space-between;
+          }
+        }
+        &__title {
+          color: #fff;
+        }
+        &__title-wrapper {
+          flex: 0 1 40%;
+        }
+        &__curve {
+          left: 0;
+          bottom: 0;
+          opacity: 0.2;
+        }
+        &__bg {
+          left: 0;
+          width: 43.5%;
+          background-image: url("/images/meeting_pointing.jpg");
+          height: 100%;
+          &:before {
+            background: #070606;
+          }
+        }
+      }
+    }
+    &--strategy {
+      background: #fff;
+      .sectors-strip {
+        &__curve {
+          left: 0;
+          bottom: -150px;
+          transform: rotate(90deg);
+          path {
+            stroke: $colour_accent;
+          }
+        }
+      }
+    }
+    &--content {
+      color: #fff;
+      .sectors-strip {
+        &__sector-wrapper {
+          padding: 250px 0;
+          position: static;
+          align-items: center;
+        }
+        &__title-wrapper {
+          flex: 0 1 30%;
+        }
+        &__title {
+          color: #fff;
+        }
+        &__content {
+          flex: 0 1 70%;
+        }
+        &__bg {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-image: url("/images/clifton.jpg");
+          &:before {
+            background: $colour_med_grey;
+          }
+        }
+        &__curve {
+          right: 0;
+          bottom: 0;
+          opacity: 0.2;
+          @include svg_path_animate(985, 1.5s);
+        }
+      }
+    }
+    &--creative {
+      background: #fff;
+      .sectors-strip {
+        &__curve {
+          left: 0;
+          bottom: 0;
+          path {
+            stroke: $colour_accent;
+          }
+        }
+      }
+    }
+    &--technology {
+      color: #fff;
+      .sectors-strip {
+        &__curve {
+          left: 0;
+          bottom: 200px;
+          @include svg_path_animate(1942, 1.5s);
+        }
+        &__title {
+          color: #fff;
+        }
+        &__bg {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-image: url("/images/tech.jpg");
+          &:before {
+            background: #070606;
+          }
+        }
+      }
+    }
+    &--methodology,
+    &--strategy,
+    &--creative {
+      .sectors-strip {
+        &__curve {
+          @include svg_path_animate(773);
+        }
+      }
     }
   }
-  &__title {
-    flex: 0 1 60%;
-    font-size: 60px;
-    &-wrapper {
-      display: flex;
-      flex: 0 1 100%;
+  &__bg {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      opacity: 0.85;
+      mix-blend-mode: multiply;
     }
   }
   &__content {
     flex: 0 1 50%;
+    font-size: 26px;
+    font-weight: 300;
     img {
       margin-top: 40px;
       display: inline-block;
       vertical-align: middle;
-      @include in_size($md) {
-        max-width: 70%;
-        margin: 40px auto 0;
-      }
       + img {
         margin-left: 10px;
       }
     }
   }
-  &__close {
+  &__curve {
     position: absolute;
-    top: 50px;
-    right: 50px;
-    z-index: 3;
-    cursor: pointer;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out 0s;
-    &.active {
-      transition: opacity 0.3s ease-in-out 0.75s;
-      opacity: 1;
-      pointer-events: auto;
+    svg {
+      float: left;
     }
   }
   @include in_size($md-only) {

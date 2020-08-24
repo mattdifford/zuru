@@ -1,112 +1,62 @@
 .header-image {
-  min-height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
-  padding-top: 100px;
-  &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-  &__title {
-    flex: 0 1 70%;
-    background-size: cover;
-    background-position: bottom right;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0 0 30px;
-    font-size: 120px;
-    line-height: 1.2;
-    font-weight: 400;
-    opacity: 0;
-    animation: hp-fade-in 0.5s ease-in-out 0.5s;
-    animation-fill-mode: forwards;
-    font-family: $font_primary;
-    background-image: linear-gradient(
-      75deg,
-      rgba(254, 205, 235, 1) 0%,
-      rgb(68, 68, 207) 45%,
-      rgba(51, 221, 255, 1) 100%
-    );
-    &-wrapper {
-      display: flex;
+  color: #fff;
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100%;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
+      height: 100%;
+      display: block;
+      background: #000;
+      opacity: 0.5;
+      mix-blend-mode: multiply;
     }
   }
-  &__subtitle {
-    flex: 0 1 100%;
-    font-size: 60px;
-    animation: hp-fade-in 0.5s ease-in-out 0.8s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-    font-weight: 600;
-    margin: 0 0 30px;
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 2;
   }
   &__content {
     flex: 0 1 50%;
+  }
+  &__title {
+    margin: 0 0 35px;
+    font-size: 50px;
     opacity: 0;
-    animation: hp-fade-in 0.5s ease-in-out 1.2s;
-    animation-fill-mode: forwards;
-    a {
-      text-decoration: none;
-      border-bottom: 1px solid currentColor;
+    transition-delay: 1.5s;
+    &:after {
+      content: "";
+      display: block;
+      width: 140px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 35px;
     }
   }
-  &--not-h1 {
-    background: #fff;
-    color: $colour_dark_grey;
-  }
-  &--has-colour {
-    .header-image {
-      &__title {
-        background: none;
-        -webkit-background-clip: unset;
-        -webkit-text-fill-color: initial;
-      }
-    }
-  }
-  @include in_size($md-only) {
-    &__title {
-      font-size: 95px;
-    }
-  }
-  @include in_size($sm-only) {
-    &__title {
-      font-size: 80px;
-    }
-    &__subtitle {
-      font-size: 53px;
-    }
-  }
-  @include in_size($mobile) {
-    &__content,
-    &__title {
-      flex: 0 1 100%;
-    }
-  }
-  @include in_size($xxs) {
-    &__title {
-      font-size: 70px;
-    }
-    &__subtitle {
-      font-size: 50px;
-    }
-  }
-  @include in_size($xxxs) {
-    &__title {
-      font-size: 45px;
-    }
-    &__subtitle {
-      font-size: 50px;
-    }
+  &__link {
+    opacity: 0;
+    transition-delay: 2s;
+    @include link_style();
   }
 }
 
-@keyframes hp-fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+body.loaded {
+  .header-image {
+    &__title,
+    &__link {
+      opacity: 1;
+    }
   }
 }

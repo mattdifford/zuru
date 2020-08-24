@@ -4,10 +4,8 @@
         <div class="features-list__list">
             {% for item in site.data.features %}
             <div class="features-list__item">
-                <a class="features-list__item-inner" href="/features/{{item.title|slugify}}"
-                    style="background: {{item.colour}};color:{{item.contrast_colour}}">
+                <a class="features-list__item-inner" href="/features/{{item.title|slugify}}">
                     <div>
-                        <h2 class="features-list__item-title">{{item.title}}</h2>
                         <div class="features-list__item-image">
                             {% include picture.html url=item.logo %}
                         </div>

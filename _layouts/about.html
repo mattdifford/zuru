@@ -6,11 +6,12 @@
     <div class="body-wrapper">
         {% include_cached header.html light=true %}
         <div id="main" class="scroll-container">
-            {%- include about_panel.html text=page.header_text-%}
-            {%- include image-strip.html text=page.strip_1.text image=page.strip_1.image-%}
+            {%- include header_image.html text=page.header_text image="/images/desk.jpg" link="#strip"-%}
+            {%- include intro_panel.html title=page.strip_1.title text=page.strip_1.text curve_position="right"-%}
+            {%- include box_strip.html image=page.strip_2.image text=page.strip_2.text-%}
             {%- include_cached team.html -%}
             {%- include_cached stats.html -%}
-            {%- include image-strip.html image=page.strip_2.image text=page.strip_2.text-%}
+            {%- include box_strip.html text=page.strip_3.text dark=true-%}
             {%- include_cached brands.html -%}
         </div>
         {%- include_cached footer.html -%}

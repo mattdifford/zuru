@@ -2,25 +2,28 @@
     <div class="container">
         <div class="footer__top">
             <div class="footer__col footer__col--logo">
-                <a class="footer__logo" href="/"
-                    title="{{site.title}}">{% include picture.html url="/images/logo.png" alt=site.title %}</a>
+                <a class="footer__logo" href="/" title="{{site.title}}"><img src="/images/logo.svg"
+                        alt="{{site.title}}" /></a>
+            </div>
+
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__col footer__col--copy">
+                <p>Copyright &copy; {{site.title}} {{ "now" | date: "%Y" }}</p>
+                <p><a href="/privacy">Privacy notice & cookies</a></p>
             </div>
             <div class="footer__col footer__col--address">
                 <p>{{site.title}}<br>{{site.address}}</p>
-            </div>
-        </div>
-        <div class="footer__bottom">
-            <p>Copyright &copy; {{site.title}} {{ "now" | date: "%Y" }}</p>
-            <p><a href="/privacy">Privacy notice & cookies</a></p>
-            <div class="footer__col footer__col--social">
-                <a class="footer__social" title="Facebook" href="{{site.facebook_url | absolute_url}}" target="_blank"
-                    rel="external noopener">Fb</a>
-                <a class="footer__social" title="Twitter" href="{{site.twitter_url | absolute_url}}" target="_blank"
-                    rel="external noopener">Tw</a>
-                <a class="footer__social" title="Instagram" href="{{site.instagram_url | absolute_url}}" target="_blank"
-                    rel="external noopener">Ig</a>
-                <a class="footer__social" title="LinkedIn" href="{{site.linkedin_url | absolute_url}}" target="_blank"
-                    rel="external noopener">Li</a>
+                <div class="footer__socials">
+                    <a class="footer__social" title="Facebook" href="{{site.facebook_url | absolute_url}}" target="_blank"
+                        rel="external noopener">Fb</a>
+                    <a class="footer__social" title="Twitter" href="{{site.twitter_url | absolute_url}}" target="_blank"
+                        rel="external noopener">Tw</a>
+                    <a class="footer__social" title="Instagram" href="{{site.instagram_url | absolute_url}}" target="_blank"
+                        rel="external noopener">Ig</a>
+                    <a class="footer__social" title="LinkedIn" href="{{site.linkedin_url | absolute_url}}" target="_blank"
+                        rel="external noopener">Li</a>
+                </div>
             </div>
         </div>
     </div>

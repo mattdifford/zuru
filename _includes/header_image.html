@@ -1,12 +1,11 @@
-<section class="header-image{%if include.colour.size > 0%} header-image--has-colour" style="color:{{include.colour}}"{%else%}"{%endif%}>
+<div class="header-image">
+    <div class="header-image__bg" style="background-image: url('{{include.image}}');"></div>
     <div class="container">
         <div class="header-image__wrapper">
-            <div class="header-image__title-wrapper">
-            <h1 class="header-image__title"{%if include.colour.size > 0%} style="color:{{include.colour}}"{%endif%}>{{include.title}}</h1>
-            </div>
             <div class="header-image__content">
-                {{include.text | markdownify}}
+                <h1 class="header-image__title scrollwatch">{{include.text}}</h1>
+                <a href="{{include.link}}" class="header-image__link scrollwatch delay">Learn more</a>
             </div>
         </div>
     </div>
-</section>
+</div>

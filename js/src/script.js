@@ -1,10 +1,10 @@
 $(document).ready(function () {
-    $('body').addClass("loaded");
     setTimeout(function () {
+        $('body').addClass("loaded");
         $('body').removeClass('fade-out');
         var elements = document.querySelectorAll('.scrollwatch');
         var config = {
-            threshold: 0.01
+            threshold: 0
         };
         var observer;
         function onIntersection(entries) {
@@ -45,24 +45,10 @@ $(document).ready(function () {
         $('body').removeClass('menu-active');
     });
     $('.features-list__list').slick({
-        slidesToShow: 5,
-        slidesToScroll: 5,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         infinite: false,
         responsive: [
-            {
-                breakpoint: 1460,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                }
-            },
             {
                 breakpoint: 768,
                 settings: {

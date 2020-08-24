@@ -1,0 +1,53 @@
+.business-sectors {
+  padding: 100px 0 250px;
+  background: #fff;
+  color: $colour_primary;
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  &__content {
+    flex: 0 1 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    flex: 0 1 50%;
+    padding: 20px;
+    &-content {
+      font-weight: 300;
+    }
+  }
+  &__inner {
+    position: relative;
+  }
+  &__bg {
+    position: absolute;
+    height: 100%;
+    width: 45%;
+    left: 0;
+    top: 0;
+    background-image: url("/images/couple.jpg");
+    background-position: right center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__curve {
+    position: absolute;
+    right: 0;
+  }
+  &__link {
+    position: absolute;
+    bottom: -150px;
+    left: 45%;
+    width: 55%;
+  }
+  &__curve {
+    position: absolute;
+  }
+}

@@ -6,8 +6,10 @@
     <div class="body-wrapper">
         {% include_cached header.html %}
         <div id="main" class="scroll-container">
-            {%- include header_image.html title=page.header_title text=page.header_text-%}
+            {%- include header_image.html image="/images/river.jpg" text=page.header_text link="#strip"-%}
+            {%- include intro_panel.html title=page.strip_1.title text=page.strip_1.text curve_position="left"-%}
             {%- include features.html -%}
+            {%- include business-sectors.html -%}
         </div>
         {%- include_cached footer.html -%}
     </div>

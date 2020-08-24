@@ -1,6 +1,5 @@
 .brands-strip {
-  min-height: 100vh;
-
+  background: #fff;
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -11,18 +10,48 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 25px 0;
-    flex: 0 1 25%;
+    margin: 35px 0;
+    flex: 0 1 (100% / 6);
+  }
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__title {
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0;
+    flex: 0 1 40%;
+    padding-right: 100px;
+    line-height: 1.2;
+    display: flex;
+    color: $colour_med_grey;
+    &:before {
+      content: "";
+      width: 24px;
+      height: 44px;
+      display: inline-block;
+      background: url("/images/link_arrow.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 10px 20px 0 0;
+    }
+  }
+  &__text {
+    flex: 0 1 60%;
+    padding-left: 50px;
+    font-weight: 300;
+    font-size: 26px;
   }
   &__subtitle {
+    color: $colour_med_grey;
     a {
       text-decoration: none;
-      border-bottom: 1px solid currentColor;
-      padding-bottom: 2px;
+      font-weight: 500;
       transition: color 0.2s ease-in-out 0s;
-      line-height: 1.6;
       &:hover {
-        color: rgba(9, 9, 121, 1);
+        color: $colour_dark_grey;
       }
     }
   }

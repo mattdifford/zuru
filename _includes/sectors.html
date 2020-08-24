@@ -1,26 +1,33 @@
 <section class="sectors-strip">
     <div class="sectors-strip__bottom">
-        <div class="sectors-strip__close">Close</div>
         {% for sector in site.data.sectors %}
-        <div class="sectors-strip__sector" id="sector_{{sector.title}}">
+        <div class="sectors-strip__sector sectors-strip__sector--{{sector.title|slugify}}" id="sector_{{sector.title}}">
+            <div class="sectors-strip__bg"></div>
             <div class="container">
                 <div class="sectors-strip__sector-wrapper">
                     <div class="sectors-strip__title-wrapper">
-                        <h3 class="sectors-strip__title">{{sector.title}}</h3>
-                        <div class="sectors-strip__type-wrapper">
+                        <h3 class="sectors-strip__title scrollwatch">{{sector.title}}</h3>
+                        <div class="sectors-strip__type-wrapper scrollwatch delay">
                             <p class="sectors-strip__type">{{sector.type}}</p>
                         </div>
-                        <div class="sectors-strip__definition">
-                            <p class="sectors-strip__definition">&ldquo;{{sector.definition}}&rdquo;</p>
+                        <div class="sectors-strip__definition scrollwatch delay">
+                            <p>&ldquo;{{sector.definition}}&rdquo;</p>
                         </div>
                     </div>
-                    <div class="sectors-strip__content">{{sector.content | markdownify}}</div>
+                    <div class="sectors-strip__content scrollwatch">{{sector.content | markdownify}}</div>
+                    <div class="sectors-strip__curve scrollwatch curve">
+                        {% if sector.curve_type == "wide" %}
+                        {% include_cached curve--wide.svg %}
+                        {% elsif sector.curve_type == "large" %}
+                        {% include_cached curve--large.svg %}
+                        {% else %}
+                        {% include_cached curve.svg %}
+                        {% endif %}
+                    </div>
+
                 </div>
             </div>
         </div>
-        {% if forloop.index == 2 %}
-        {%- include image-strip.html image="/images/wall.jpg" text="Every decision we take together is another intelligent, measurable step towards your overall goals." -%}
-        {% endif %}
         {% endfor %}
     </div>
 </section>

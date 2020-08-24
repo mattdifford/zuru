@@ -63,3 +63,43 @@ $mobile: (
   padding: 0 0 10px;
   margin: 0 0 25px;
 }
+
+@mixin link_style() {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  &:before {
+    content: "";
+    height: 2px;
+    width: 60px;
+    display: block;
+    background: $colour_accent;
+    order: 2;
+    margin: 0 5px 0 15px;
+  }
+  &:after {
+    content: url("/images/link_arrow.svg");
+    order: 3;
+    transition: all 0.2s ease-in-out 0s;
+    transform: translateX(0);
+  }
+  &:hover {
+    &:after {
+      transform: translateX(10px);
+    }
+  }
+}
+
+@mixin svg_path_animate($length, $duration: 1s) {
+  path {
+    stroke-dasharray: $length;
+    stroke-dashoffset: $length;
+    transition: stroke-dashoffset $duration ease-in-out 0.5s;
+  }
+  &.scrolled {
+    path {
+      stroke-dashoffset: 0;
+    }
+  }
+}

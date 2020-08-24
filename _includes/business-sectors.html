@@ -1,0 +1,24 @@
+<div class="business-sectors">
+    <div class="business-sectors__inner">
+        <div class="business-sectors__bg"></div>
+        <div class="business-sectors__curve">{% include curve--hook.svg %}</div>
+        <div class="container">
+            <div class="business-sectors__wrapper">
+                <div class="business-sectors__content">
+                    {% for i in (1..4) %}
+                    <div class="business-sectors__item">
+                        {% include picture.html url="/images/marketing.png" alt="Marketing"%}
+                        <h3 class="business-sectors__item-title">Marketing</h3>
+                        <p class="business-sectors__item-content">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                            tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                            nostrud exerci tation
+                        </p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="business-sectors__link"><a href="/contact" class="button">Find out what we can do for you</a></div>
+            </div>
+        </div>
+    </div>
+</div>
