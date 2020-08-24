@@ -103,16 +103,6 @@ $(document).ready(function () {
         $('body').removeClass('iframe').find('.video-overlay').remove();
     })
 });
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("header_bar").style.transform = "translateY(0)";
-    } else {
-        document.getElementById("header_bar").style.transform = "translateY(-100%)";
-    }
-    prevScrollpos = currentScrollPos;
-}
 $.fn.serializeObject = function () {
     var o = {};
     var a = this.serializeArray();

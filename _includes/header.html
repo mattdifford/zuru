@@ -1,13 +1,18 @@
 <div class="header{%if include.light%} header--light{%endif%}" id="header_bar">
     <div class="container">
         <div class="header__wrapper">
-            <a class="header__logo" href="/"><img src="/images/logo.svg" alt="{{site.title}}"/></a>
-            <div class="header__menu-icon">
-                <span class="header__menu-icon-inner"></span>
-                <span class="header__menu-icon-inner"></span>
-                <span class="header__menu-icon-inner"></span>
-            </div>
+            <a class="header__logo" href="/">{% include logo.svg %}</a>
+            <nav class="header__nav">
+                <div class="header__nav-item">
+                    <a class="header__nav-link" href="/what-we-do">What we do</a>
+                </div>
+                <div class="header__nav-item">
+                    <a class="header__nav-link" href="/about">About us</a>
+                </div>
+                <div class="header__nav-item">
+                    <a class="header__nav-link" href="/contact">Contact</a>
+                </div>
+            </nav>
         </div>
     </div>
 </div>
-{%include menu.html %}

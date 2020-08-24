@@ -35,7 +35,7 @@
     margin: 0 0 35px;
     font-size: 50px;
     opacity: 0;
-    transition-delay: 1.5s;
+    transition: opacity 0.4s ease-in-out 0.5s;
     &:after {
       content: "";
       display: block;
@@ -47,7 +47,6 @@
   }
   &__link {
     opacity: 0;
-    transition-delay: 2s;
     @include link_style();
   }
 }

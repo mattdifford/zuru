@@ -21,11 +21,11 @@
                         challenge?</a></p>
             </div>
         </div>
-        <div class="brands-strip__list scrollwatch delay">
+        <div class="brands-strip__list">
             {% assign brands = site.brands | split: ',' %}
             {% for brand in brands %}
             {%capture url%}/images/client-{{brand}}.png{%endcapture%}
-            <div class="brands-strip__item">{% include picture.html url=url alt=brand %}</div>
+            <div class="brands-strip__item scrollwatch">{% include picture.html url=url alt=brand %}</div>
             {%endfor%}
         </div>
     </div>

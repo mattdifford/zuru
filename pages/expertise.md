@@ -1,8 +1,8 @@
 ---
 layout: expertise
 description: This is results-driven innovation. This is money-where-our-mouth-is marketing. This is ZURU Group.
-permalink: /expertise
-title: Our Expertise
+permalink: /what-we-do
+title: What we do
 header_title: We create disruptive campaigns for disruptive brands
 header_text: You didn't come this far to only come this far&hellip;
 header_text_1: >

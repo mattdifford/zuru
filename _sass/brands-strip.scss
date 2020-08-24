@@ -12,6 +12,11 @@
     justify-content: center;
     margin: 35px 0;
     flex: 0 1 (100% / 6);
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        transition-delay: $i * 0.12s;
+      }
+    }
   }
   &__wrapper {
     display: flex;
