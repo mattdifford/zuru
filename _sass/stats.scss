@@ -1,6 +1,7 @@
 .stats-strip {
   background: #fff;
   padding: 0;
+  overflow: hidden;
   &__title {
     font-size: 55px;
     display: flex;
@@ -25,9 +26,6 @@
         opacity: 1;
       }
     }
-    @include in_size($md) {
-      max-width: 60%;
-    }
   }
   &__subtitle {
     padding-left: 35px;
@@ -42,6 +40,7 @@
     color: #fff;
     font-weight: 300;
     font-size: 26px;
+
     strong {
       font-weight: 500;
       font-family: $font_primary;
@@ -74,8 +73,10 @@
         .stats-strip__item {
           &-curve {
             svg {
-              transform: rotate(180deg);
-              transform-origin: center;
+              @include in_size($sm) {
+                transform: rotate(180deg);
+                transform-origin: center;
+              }
             }
           }
         }
@@ -106,8 +107,90 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
-    &-curve{
+    &-curve {
       @include svg_path_animate(520);
+    }
+  }
+  @include in_size($md) {
+    &__title {
+      max-width: 60%;
+    }
+  }
+  @include in_size($md-only) {
+    &__list {
+      &-row {
+        &--second {
+          padding: 0;
+        }
+      }
+    }
+    &__item {
+      margin: 0 100px;
+    }
+  }
+  @include in_size($sm) {
+    &__top {
+      &-wrapper {
+        padding: 0 50px;
+      }
+    }
+  }
+  @include in_size($sm-only) {
+    &__list {
+      padding-left: 50px;
+      padding-right: 50px;
+      &-row {
+        justify-content: space-between;
+        &--second {
+          padding: 0;
+        }
+      }
+    }
+    &__item {
+      margin: 0;
+    }
+  }
+  @include in_size($mobile) {
+    &__top {
+      padding: 40px 0;
+    }
+    &__title {
+      font-size: 40px;
+    }
+    &__subtitle {
+      font-size: 22px;
+    }
+    &__list {
+      padding: 25px 0;
+      &-row {
+        justify-content: center;
+        flex-wrap: wrap;
+        &--second {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+    &__item {
+      margin: 25px 0;
+      + .stats-strip__item {
+        .stats-strip__item-curve {
+          svg {
+            transform: rotate(180deg);
+            transform-origin: center;
+          }
+        }
+      }
+    }
+  }
+  @include in_size($xxxs) {
+    &__title {
+      &:before {
+        display: none;
+      }
+    }
+    &__subtitle {
+      padding-left: 0;
     }
   }
 }

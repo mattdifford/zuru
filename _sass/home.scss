@@ -1,7 +1,6 @@
 .body--home {
   .header {
-    position: absolute;
-    z-index: 3;
+    display: none;
   }
 }
 
@@ -9,99 +8,62 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  text-align: center;
   background: #000;
   color: #fff;
-  h1 {
-    font-size: 90px;
-    span {
-      display: block;
-      animation: fade-in 0.5s ease-in-out 0s;
-      animation-fill-mode: forwards;
-      color: #000;
-      font-family: $font_primary;
-      font-weight: 400;
-      &.two,
-      &.four {
-        font-weight: 900;
-        font-family: $font_secondary;
-        animation-duration: 1s;
-      }
-      &.one {
-        animation-delay: 0.5s;
-      }
-      &.two {
-        animation-delay: 1.2s;
-      }
-      &.three {
-        animation-delay: 2s;
-      }
-      &.four {
-        animation-delay: 2.8s;
+  text-decoration: none;
+  &__title {
+    display: flex;
+    align-items: flex-end;
+    &:hover {
+      .home-panel__link:after {
+        transform: translateX(10px);
       }
     }
-    @supports (mix-blend-mode: lighten) {
-      display: inline-block;
-      position: relative;
-      mix-blend-mode: lighten;
-      color: #fff;
-      background: #000;
-      &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(
-          75deg,
-          rgba(254, 205, 235, 1) 0%,
-          rgba(9, 9, 121, 1) 45%,
-          rgba(51, 221, 255, 1) 100%
-        );
-        mix-blend-mode: multiply;
-      }
+  }
+  &__text,
+  &__logo,
+  &__link {
+    animation: fade-in 0.5s ease-in-out 0s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  &__text {
+    animation-delay: 0.5s;
+    font-size: 20px;
+    line-height: 0.7;
+  }
+  &__logo {
+    animation-delay: 1s;
+    margin-left: 20px;
+    display: inline-block;
+    svg {
+      float: left;
+    }
+  }
+  &__link {
+    @include link_style();
+    align-self: center;
+    animation-delay: 1.5s;
+    animation-duration: 1s;
+    margin-left: 10px;
+    &:before {
+      width: 200px;
     }
   }
   @include in_size($xxs) {
-    h1 {
-      .one,
-      .three {
-        font-size: 40px;
-      }
-      .two,
-      .four {
-        font-size: 55px;
+    &__title {
+      flex-wrap: wrap;
+    }
+    &__link {
+      flex: 0 1 100%;
+      margin: 20px 0 0;
+      &:before {
+        margin-left: 0;
       }
     }
   }
 }
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateX(0);
-  }
-  40% {
-    transform: translateX(15px);
-  }
-  60% {
-    transform: translateX(5px);
-  }
-}
 @keyframes fade-in {
-  from {
-    color: #000;
-  }
-  to {
-    color: #fff;
-  }
-}
-
-@keyframes o-fade-in {
   from {
     opacity: 0;
   }

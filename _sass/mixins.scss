@@ -29,7 +29,7 @@ $md-only: (
   max: map-get($lg, min) - 1,
 );
 $mobile: (
-  max: map-get($md, min) - 1,
+  max: map-get($sm, min) - 1,
 );
 
 @mixin in_size($map) {
@@ -81,7 +81,14 @@ $mobile: (
     margin: 0 5px 0 15px;
   }
   &:after {
-    content: url("/images/link_arrow.svg");
+    content: "";
+    background: url("/images/link_arrow.svg");
+    display: inline-block;
+    width: 8px;
+    height: 13px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     order: 3;
     transition: all 0.2s ease-in-out 0s;
     transform: translateX(0);

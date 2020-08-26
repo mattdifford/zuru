@@ -35,7 +35,8 @@
     margin: 0 0 35px;
     font-size: 50px;
     opacity: 0;
-    transition: opacity 0.4s ease-in-out 0.5s;
+    animation: fade-in 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
     &:after {
       content: "";
       display: block;
@@ -48,14 +49,48 @@
   &__link {
     opacity: 0;
     @include link_style();
+    animation: fade-in 0.5s ease-in-out 1s;
+    animation-fill-mode: forwards;
+  }
+  &__socials {
+    position: fixed;
+    z-index: 999;
+    @include in_size($mobile) {
+      display: none;
+    }
+  }
+  &__social {
+    text-decoration: none;
+    display: flex;
+    color: $colour_med_grey;
+    border: 2px solid $colour_accent;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin: 10px 0;
+    transition: all 0.2s ease-in-out 0s;
+    &:hover {
+      background: $colour_accent;
+      color: $colour_primary;
+    }
+  }
+  @include in_size($xxs) {
+    &__bg {
+      width: 100%;
+    }
+    &__content {
+      flex: 0 1 100%;
+    }
   }
 }
-
-body.loaded {
-  .header-image {
-    &__title,
-    &__link {
-      opacity: 1;
-    }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

@@ -5,8 +5,8 @@
 <body class="fade-out body--pitching">
     <div class="body-wrapper">
         {% include_cached header.html %}
-        {%- include header_image.html title=page.header_title text=page.header_text-%}
-        {% include_cached pitches.html %}
+        {%- include header_image.html text=page.header_text image="/images/desk.jpg" link="#strip"-%}
+        {%- include intro_panel.html title=page.strip_1.title text=page.strip_1.text curve_position="center"-%}
         {% include_cached pitching_form.html %}
         {%- include_cached footer.html -%}
     </div>

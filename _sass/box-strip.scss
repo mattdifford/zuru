@@ -7,6 +7,9 @@
     @include in_size($md) {
       max-width: 65%;
     }
+    @include in_size($sm-only) {
+      padding: 0 50px;
+    }
   }
   &__inner {
     position: relative;
@@ -76,5 +79,19 @@
   &--dark {
     background: $colour_primary;
     color: #fff;
+  }
+  @include in_size($mobile) {
+    padding: 40px 0;
+    &__text {
+      font-size: 50px;
+    }
+  }
+  @include in_size($xxs) {
+    &__text {
+      font-size: 35px;
+    }
+    &__inner {
+      padding: 70px 0;
+    }
   }
 }

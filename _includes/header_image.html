@@ -7,5 +7,17 @@
                 <a href="{{include.link}}" class="header-image__link ">Learn more</a>
             </div>
         </div>
+        <div class="header-image__socials">
+            <a class="header-image__social" title="Facebook" href="{{site.facebook_url | absolute_url}}" target="_blank"
+                rel="external noopener"><i class="icon-facebook"></i></a>
+            {% if site.twitter_url.size > 0%}
+            <a class="header-image__social" title="Twitter" href="{{site.twitter_url | absolute_url}}" target="_blank"
+                rel="external noopener"><i class="icon-twitter"></i></a>
+            {% endif %}
+            <a class="header-image__social" title="Instagram" href="{{site.instagram_url | absolute_url}}"
+                target="_blank" rel="external noopener"><i class="icon-instagram"></i></a>
+            <a class="header-image__social" title="LinkedIn" href="{{site.linkedin_url | absolute_url}}" target="_blank"
+                rel="external noopener"><i class="icon-linkedin"></i></a>
+        </div>
     </div>
 </div>

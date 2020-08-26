@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot?e1606g");
-  src: url("fonts/icomoon.eot?e1606g#iefix") format("embedded-opentype"),
-    url("fonts/icomoon.ttf?e1606g") format("truetype"),
-    url("fonts/icomoon.woff?e1606g") format("woff"),
-    url("fonts/icomoon.svg?e1606g#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?arj970");
+  src: url("fonts/icomoon.eot?arj970#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?arj970") format("truetype"),
+    url("fonts/icomoon.woff?arj970") format("woff"),
+    url("fonts/icomoon.svg?arj970#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -14,7 +14,7 @@
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
-  speak: none;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -29,6 +29,12 @@
 .icon-facebook:before {
   content: "\e900";
 }
+.icon-arrow-right:before {
+  content: "\ea3c";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
 .icon-chevron-left:before {
   content: "\f053";
 }
@@ -41,9 +47,6 @@
 .icon-twitter:before {
   content: "\f099";
 }
-.icon-instagram:before {
-  content: "\ea92";
-}
-.icon-arrow-right:before {
-  content: "\ea3c";
+.icon-linkedin:before {
+  content: "\eaca";
 }

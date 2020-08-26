@@ -2,6 +2,7 @@
   padding-top: 150px;
   background: #fff;
   position: relative;
+  overflow: hidden;
   .container,
   &__wrapper {
     position: relative;
@@ -12,12 +13,13 @@
     font-weight: 500;
     margin: 0;
     flex: 0 1 40%;
-    padding-right: 100px;
+    padding: 0 50px;
     line-height: 1.2;
     display: flex;
     &:before {
       content: "";
       width: 24px;
+      flex: 0 0 24px;
       height: 44px;
       display: inline-block;
       background: url("/images/link_arrow.svg");
@@ -57,10 +59,9 @@
   }
   &__list {
     display: flex;
-    margin: 0 -75px;
   }
   &__item {
-    padding: 0 75px;
+    padding: 0 50px;
     flex: 0 1 100%;
     &-image {
       position: relative;
@@ -101,6 +102,53 @@
       transform: rotate(90deg);
       bottom: 0;
       left: 0;
+    }
+  }
+  @include in_size($md-only) {
+    &__list {
+      padding: 0 10px;
+    }
+    &__item {
+      padding: 0 40px;
+    }
+  }
+  @include in_size($sm-only) {
+    &__list {
+      padding: 0 30px;
+    }
+    &__item {
+      padding: 0 20px;
+    }
+  }
+  @include in_size($mobile) {
+    padding: 40px 0 0;
+    &__list {
+      flex-wrap: wrap;
+    }
+    &__wrapper {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+    &__title,
+    &__text {
+      flex: 0 1 100%;
+      padding: 0;
+    }
+    &__title {
+      margin-bottom: 25px;
+      font-size: 40px;
+      &:before {
+        margin-top: 4px !important;
+      }
+    }
+    &__text {
+      font-size: 22px;
+    }
+    &__item {
+      padding: 40px 0;
+      &-desc {
+        font-size: 20px;
+      }
     }
   }
 }
