@@ -37,6 +37,9 @@
   }
   &__title-wrapper {
     flex-wrap: wrap;
+    @include in_size($sm) {
+      padding-left: 50px;
+    }
   }
   &__title-wrapper,
   &__content {
@@ -271,9 +274,21 @@
       float: left;
     }
   }
-  @include in_size($md-only) {
+  @include in_size($sm-only) {
     &__content {
-      flex: 0 1 55%;
+      font-size: 24px;
+    }
+    &__sector {
+      &--content {
+        .sectors-strip {
+          &__title-wrapper {
+            flex: 0 1 35%;
+          }
+          &__content {
+            flex: 0 1 65%;
+          }
+        }
+      }
     }
   }
   @include in_size($mobile) {
@@ -286,13 +301,21 @@
       flex: 0 1 100%;
       font-size: 30px;
       margin: 0 0 25px;
+      &-wrapper {
+        flex: 0 1 100% !important;
+      }
     }
     &__item {
       font-size: 35px;
     }
     &__content {
-      flex: 0 1 100%;
-      font-size: 17px;
+      flex: 0 1 100% !important;
+      font-size: 20px;
+    }
+    &__sector {
+      &-wrapper {
+        padding: 40px 0 !important;
+      }
     }
   }
 }
