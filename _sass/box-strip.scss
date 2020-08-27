@@ -95,3 +95,14 @@
     }
   }
 }
+
+html.webp {
+  .box-strip--image {
+    background: var(--bs-background-webp);
+  }
+}
+html:not(.webp) {
+  .box-strip--image {
+    background: var(--background);
+  }
+}

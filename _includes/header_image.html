@@ -1,5 +1,7 @@
 <div class="header-image">
-    <div class="header-image__bg" style="background-image: url('{{include.image}}');"></div>
+    {%-assign url = include.image | trim | remove: '.png' | remove: '.jpg'-%}
+    {% capture webp %}{{url}}.webp{% endcapture %}
+    <div class="header-image__bg" style="--background: url('{{include.image}}');--background-webp: url('{{webp}}')"></div>
     <div class="container">
         <div class="header-image__wrapper">
             <div class="header-image__content">

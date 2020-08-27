@@ -32,7 +32,6 @@
   }
   &__top {
     padding: 120px 0;
-    background-image: url("/images/tech.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -191,6 +190,23 @@
     }
     &__subtitle {
       padding-left: 0;
+    }
+  }
+}
+
+html.webp {
+  .stats-strip {
+    &__top {
+      background-image: url("/images/tech.webp");
+    }
+  }
+}
+
+
+html:not(.webp) {
+  .stats-strip {
+    &__top {
+      background-image: url("/images/tech.jpg");
     }
   }
 }

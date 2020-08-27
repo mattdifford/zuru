@@ -1,4 +1,6 @@
-<div class="box-strip{%if include.dark==true%} box-strip--dark{%endif%}{%if include.image.size>0%} box-strip--image" style="background-image:url('{{include.image}}')"{%else%}"{%endif%}>
+{%-assign url = include.image | trim | remove: '.png' | remove: '.jpg'-%}
+    {% capture webp %}{{url}}.webp{% endcapture %}
+<div class="box-strip{%if include.dark==true%} box-strip--dark{%endif%}{%if include.image.size>0%} box-strip--image" style="--bs-background: url('{{include.image}}');--bs-background-webp: url('{{webp}}')"{%else%}"{%endif%}>
     <div class="container">
         <div class="box-strip__wrapper">
             <div class="box-strip__inner scrollwatch">
