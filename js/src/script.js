@@ -34,65 +34,7 @@ $(document).ready(function () {
             $("html,body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 750);
         }
     });
-    $('.header__menu-icon').on("click", function (e) {
-        e.preventDefault();
-        $('.menu').addClass('active');
-        $('body').addClass('menu-active');
-    });
-    $('.menu__close').on("click", function (e) {
-        e.preventDefault();
-        $('.menu').removeClass('active');
-        $('body').removeClass('menu-active');
-    });
-    $('.features-list__list').slick({
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: false,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                }
-            },
-            {
-                breakpoint: 531,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },
-        ]
-    });
-    $('.journal__list').slick({
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        infinite: false,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                }
-            },
-            {
-                breakpoint: 531,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },
-        ]
-    });
+    
     $('.yt-iframe').on("click", function (e) {
         e.preventDefault();
         var html = '<div class="video-overlay"><a class="video-overlay__close" href="#">Close</a><iframe src="https://www.youtube.com/embed/' + $(this).attr('data-yt-id') + '?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
@@ -103,22 +45,6 @@ $(document).ready(function () {
         $('body').removeClass('iframe').find('.video-overlay').remove();
     })
 });
-$.fn.serializeObject = function () {
-    var o = {};
-    var a = this.serializeArray();
-    $.each(a, function () {
-        if (o[this.name]) {
-            if (!o[this.name].push) {
-                o[this.name] = [o[this.name]];
-            }
-            o[this.name].push(this.value || '');
-        } else {
-            o[this.name] = this.value || '';
-        }
-    });
-    return o;
-};
-
 let links = $('body').find('a');
 if (links) {
     links.on("click", function () {
@@ -133,10 +59,8 @@ if (links) {
             e.preventDefault();
             setTimeout(function () {
                 if (body.classList.contains('fade-out')) {
-                    console.log('navigating');
                     window.location = href;
                 } else {
-                    console.log('whoops', e.srcElement.parentElement.href);
                 }
             }, 200);
             body.classList.add('fade-out');

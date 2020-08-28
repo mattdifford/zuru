@@ -10,6 +10,37 @@
         {%- include_cached footer.html -%}
     </div>
     {%- include foot.html layout=page.layout -%}
+    <script src="/src/slick.min.js"></script>
+    <script>
+        $('.journal__list').slick({
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            infinite: false,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 531,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+            ]
+        });
+    </script>
 </body>
 
 </html>
