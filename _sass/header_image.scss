@@ -96,3 +96,17 @@
   }
 }
 
+html.webp {
+  .header-image {
+    &__bg {
+      background: var(--background-webp);
+    }
+  }
+}
+html:not(.webp) {
+  .header-image {
+    &__bg {
+      background: var(--background);
+    }
+  }
+}
