@@ -55,6 +55,7 @@
   &__socials {
     position: fixed;
     z-index: 999;
+    bottom: 130px;
     @include in_size($mobile) {
       display: none;
     }
@@ -95,17 +96,3 @@
   }
 }
 
-html.webp {
-  .header-image {
-    &__bg {
-      background: var(--background-webp);
-    }
-  }
-}
-html:not(.webp) {
-  .header-image {
-    &__bg {
-      background: var(--background);
-    }
-  }
-}

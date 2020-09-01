@@ -131,13 +131,13 @@
           flex: 0 1 40%;
         }
         &__curve {
-          left: 0;
+          left: 50px;
           bottom: 0;
           opacity: 0.2;
         }
         &__bg {
           left: 0;
-          width: 43.5%;
+          width: calc(43.5% + 50px);
 
           height: 100%;
           &:before {
@@ -150,8 +150,8 @@
       background: #fff;
       .sectors-strip {
         &__curve {
-          left: 0;
-          bottom: -150px;
+          left: 50px;
+          bottom: -100px;
           transform: rotate(90deg);
           path {
             stroke: $colour_accent;
@@ -197,7 +197,7 @@
       background: #fff;
       .sectors-strip {
         &__curve {
-          left: 0;
+          left: 50px;
           bottom: 0;
           path {
             stroke: $colour_accent;
@@ -209,7 +209,7 @@
       color: #fff;
       .sectors-strip {
         &__curve {
-          left: 0;
+          left: 50px;
           bottom: 200px;
           @include svg_path_animate(1942, 1.5s);
         }
