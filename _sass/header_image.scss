@@ -9,6 +9,11 @@
     right: 0;
     width: 65%;
     height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     &:before {
       content: "";
       position: absolute;
@@ -96,17 +101,3 @@
   }
 }
 
-html.webp {
-  .header-image {
-    &__bg {
-      background: var(--background-webp);
-    }
-  }
-}
-html:not(.webp) {
-  .header-image {
-    &__bg {
-      background: var(--background);
-    }
-  }
-}
