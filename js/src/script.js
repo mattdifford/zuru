@@ -37,6 +37,7 @@ $(document).ready(function () {
     $('.header__menu-icon').on("click", function (e) {
         e.preventDefault();
         $('.header__nav-wrapper').toggleClass('active');
+        $('body').toggleClass('menu-active');
     });
 });
 let links = $('body').find('a');

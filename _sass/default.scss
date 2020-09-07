@@ -308,6 +308,10 @@ body.fade-out {
   }
 }
 
+body.menu-active {
+  overflow: hidden;
+}
+
 .page {
   &__content {
     color: #fff;
