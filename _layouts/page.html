@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+{%-include head.html-%}
+
+<body class="fade-out body--page">
+    <div class="body-wrapper">
+        {%- include header.html -%}
+        <div class="page-wrapper">
+            <div class="container">
+                {{content}}
+            </div>
+        </div>
+        {%- include footer.html -%}
+    </div>
+    {%- include foot.html layout=page.layout -%}
+</body>
+
+</html>

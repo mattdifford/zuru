@@ -292,7 +292,7 @@ a {
   }
   @include in_size($sm) {
     &__wrapper {
-      padding: 0 50px;
+      padding: 0 65px;
     }
   }
 }
@@ -310,6 +310,35 @@ body.fade-out {
 
 body.menu-active {
   overflow: hidden;
+}
+
+.body--page {
+  background: #fff;
+  .header {
+    background: $colour_primary;
+  }
+  .page-wrapper {
+    padding-top: 100px;
+    table {
+      border-top: 1px solid $colour_dark_grey;
+      border-left: 1px solid $colour_dark_grey;
+      border-collapse: collapse;
+      tr {
+        display: flex;
+        th,
+        td {
+          flex: 1 1 100%;
+        }
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid $colour_dark_grey;
+        border-left: none;
+        border-top: none;
+      }
+    }
+  }
 }
 
 .page {
