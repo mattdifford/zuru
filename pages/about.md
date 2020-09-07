@@ -18,5 +18,5 @@ strip_2:
     text: Performance marketing has changed the game forever
     image: "/images/meeting_pointing_wide.jpg"
 strip_3:
-    text: Want more.<br>Demand more<br>Expect more<br>
+    text: Want more.<br>Demand more.<br>Expect more.<br>
 ---

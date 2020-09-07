@@ -42,11 +42,9 @@ sass:
   sass_dir: _sass
 
 # social links
-twitter_username: CHANGE ME
-facebook_username: CHANGE ME
-instagram_username: CHANGE ME
-youtube_username: CHANGE ME
-
+facebook_url: https://www.facebook.com/zurugroup
+instagram_url: https://www.instagram.com/yourmoneysos/
+linkedin_url: https://www.linkedin.com/company/42402757
 # Mastodon instances
 # mastodon:
 # - username: jekyll

@@ -34,7 +34,10 @@ $(document).ready(function () {
             $("html,body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 750);
         }
     });
-    
+    $('.header__menu-icon').on("click", function (e) {
+        e.preventDefault();
+        $('.header__nav-wrapper').toggleClass('active');
+    });
 });
 let links = $('body').find('a');
 if (links) {
