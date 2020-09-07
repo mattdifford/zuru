@@ -85,10 +85,13 @@
   }
   @include in_size($xxs) {
     &__bg {
-      width: 100%;
+      display: none;
     }
     &__content {
       flex: 0 1 100%;
+    }
+    &__title {
+      font-size: 35px;
     }
   }
 }
@@ -100,4 +103,3 @@
     opacity: 1;
   }
 }
-

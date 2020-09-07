@@ -196,9 +196,12 @@
     &--creative {
       background: #fff;
       .sectors-strip {
+        &__sector-wrapper {
+          padding: 150px 0 250px;
+        }
         &__curve {
           left: 50px;
-          bottom: 0;
+          bottom: -80px;
           path {
             stroke: $colour_accent;
           }
