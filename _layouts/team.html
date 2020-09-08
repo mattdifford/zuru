@@ -2,13 +2,10 @@
 <html lang="en-gb">
 {%-include head.html-%}
 
-<body class="fade-out body--features">
+<body class="fade-out body--home">
     <div class="body-wrapper">
         {% include_cached header.html %}
-        <div id="main" class="scroll-container">
-            {%- include header_image.html title=page.header_title text=page.header_text-%}
-            {%- include audiences.html -%}
-        </div>
+        {% include_cached team.html %}
         {%- include_cached footer.html -%}
     </div>
     {%- include foot.html layout=page.layout -%}

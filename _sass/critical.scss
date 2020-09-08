@@ -1,5 +1,4 @@
 body {
-  background-color: $colour_primary;
   transition: background-color $body_transition;
   &.fade-out {
     .body-wrapper {

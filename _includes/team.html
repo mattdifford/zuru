@@ -1,101 +1,22 @@
-<section class="team-strip strip split-content-strip">
-    <div class="team-strip__curve team-strip__curve--top scrollwatch curve">
-        {% include curve--large.svg %}
-    </div>
-    <div class="team-strip__curve team-strip__curve--bottom scrollwatch curve">
-        {% include curve--large.svg %}
-    </div>
+<div class="team-strip">
     <div class="container">
         <div class="team-strip__wrapper">
-            <h3 class="team-strip__title scrollwatch ">The {{site.title}} management team</h3>
-
-            <div class="team-strip__text scrollwatch delay">
-                <p>The marketing world is full of people with impressive CVs. But few have
-                    the entrepreneurial drive to match their great-on-paper expertise. Not so with {{site.title}}.</p>
-
-                <p>Boasting the strongest credentials in the performance marketing
-                    business, we're still as hungry as we were from our earliest days, with your success our ultimate,
-                    ever-present motivation.</p>
-            </div>
-        </div>
-    </div>
-    <div class="team-strip__list-outer">
-        <div class="container">
             <div class="team-strip__list">
-                <div class="team-strip__item">
-                    <div class="team-strip__item-inner">
-                        <div class="team-strip__item-image scrollwatch">
-                            {% include picture.html url="/images/ben.jpg" alt="Ben Harvey" %}
-                            <h3 class="team-strip__item-title">Ben Harvey</h3>
-                        </div>
-                        <div class="team-strip__item-desc scrollwatch delay">
-                            <p>Having cut his teeth in the white-hot media world of the late 90s, Ben is renowned
-                                throughout the industry as a high-flying marketing leader with real commercial bite.</p>
-                            <p>He's held top positions at the biggest names in the business. Accumulated media spends in
-                                excess of £500 million at unprecedented rates. And delivered the disruptive rocket the
-                                marketing landscape needed in 2009, founding Virtuoso Advertising, one of the UK's first
-                                performance-based digital agencies – sending it soaring into the top 10 independent
-                                agencies in just its first year of trading.</p>
-                            <p>Following a successful sale of the business to Zeta Global, he helped the newly evolved
-                                company grow to a valuation of over $1 billion and become one of the world's largest
-                                privately owned digital technology businesses.</p>
-                            <p><a href="https://www.linkedin.com/in/benpharvey" rel="external noopener"
-                                    target="_blank">LinkedIn</a></p>
-                        </div>
-                    </div>
+                <h3 class="team-strip__list-title">{{site.title}} team</h3>
+                {% for person in site.data.team %}
+                <a href="#" class="team-strip__list-item" data-index="{{forloop.index}}">{{person.name}}</a>
+                {% endfor %}
+            </div>
+            <div class="team-strip__content">
+                {% for person in site.data.team %}
+                <div class="team-strip__person" data-index="{{forloop.index}}">
+                    <!-- <div class="team-strip__person-image">{% include picture.html url=person.image alt=person.name%}
+                    </div> -->
+                    <h3 class="team-strip__person-name">{{person.name}}</h3>
+                    <div class="team-strip__person-content">{{person.desc | markdownify }}</div>
                 </div>
-                <div class="team-strip__item">
-                    <div class="team-strip__item-inner">
-                        <div class="team-strip__item-image scrollwatch">
-                            {% include picture.html url="/images/james.jpg" alt="James Copeland-Eccles" %}
-                            <h3 class="team-strip__item-title">James Copeland-Eccles</h3>
-                        </div>
-                        <div class="team-strip__item-desc scrollwatch delay">
-                            <p>PepsiCo, Peugeot, Carlsberg, Logitech and many more. They've all seen their performance
-                                boosted, bolstered and brought bang up to date thanks to the specialist skills and
-                                sharp-edged marketing savvy that James brings to the table.</p>
-                            <p>Joining Ben early on in the success story at Virtuoso, he was also a key part of the
-                                international expansion at Zeta Global, forging a formidable partnership that remains
-                                the envy of the performance marketing world today.</p>
-                            <p>By the end of 2012 Virtuoso was dominating the market place and was successfully sold to
-                                Zeta Global. James then took on the role of Vice President of Zeta Global's performance
-                                marketing divisions. Over the next 3 years increased growth helped them achieve a
-                                valuation of over USD1 billion and remain one of the world's largest privately owned
-                                digital technology companies.</p>
-                            <!-- <p>Whether it’s working with the brightest new brands or longest-established industry
-                                leaders, James has built his reputation on in-depth audience intelligence and an innate
-                                understanding of the complete marketing mix. And having managed budgets that stretch
-                                from £50,000 to £10 million, no-one is more adept at making every element of your
-                                campaigns work together for scalable success.</p> -->
-                            <p><a href="https://www.linkedin.com/in/jameseccles" rel="external noopener"
-                                    target="_blank">LinkedIn</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-strip__item">
-                    <div class="team-strip__item-inner">
-                        <div class="team-strip__item-image scrollwatch">
-                            {% include picture.html url="/images/marc.jpg" alt="Marc Suggars" %}
-                            <h3 class="team-strip__item-title">Marc Suggars</h3>
-                        </div>
-                        <div class="team-strip__item-desc scrollwatch delay">
-                            <p>A business development specialist with a passion for performance and a fearless willing
-                                to tackle challenges head on, Marc launched his career in the media industry alongside
-                                Ben and James at Zeta Global in 2014.</p>
-                            <p>The impact he made was felt immediately, as he played a pivotal role in extending and
-                                enhancing the Group’s external media capabilities in the UK, before turning his
-                                attention to Zeta’s London-based sales team and taking charge of a client base with
-                                revenues running into seven figures.</p>
-                            <p>Not content with this whirlwind beginning to his professional life, Marc left Zeta to
-                                develop formidable skills in data security and processing. And in the pre-GDPR era, he
-                                applied his expertise to the gambling sector, working in close collaboration with the
-                                industry’s governing body to develop (literally) game-changing technology.</p>
-                            <p><a href="https://www.linkedin.com/in/marc-suggars" rel="external noopener"
-                                    target="_blank">LinkedIn</a></p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
-</section>
+</div>

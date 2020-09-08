@@ -5,9 +5,7 @@
 <body class="fade-out body--contact">
     <div class="body-wrapper">
         {% include_cached header.html %}
-        {%- include header_image.html text=page.header_text image="/images/desk.jpg" link="#contact_form"-%}
-        {%- include box_strip.html text=page.strip_1.text-%}
-        {% include_cached contact_form.html %}
+        {% include_cached contact.html %}
         {%- include_cached footer.html -%}
     </div>
     {%- include foot.html layout=page.layout -%}

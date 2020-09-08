@@ -30,7 +30,7 @@ $(document).ready(function () {
         }
     }, 200)
     $('a').on("click", function () {
-        if ($(this).attr("href").charAt(0) === '#') {
+        if ($(this).attr("href").charAt(0) === '#' && $(this).attr("href").length > 1) {
             $("html,body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 750);
         }
     });
@@ -38,6 +38,22 @@ $(document).ready(function () {
         e.preventDefault();
         $('.header__nav-wrapper').toggleClass('active');
         $('body').toggleClass('menu-active');
+    });
+
+    $('.team-strip__list-item').on("click", function (e) {
+        e.preventDefault();
+        $('.team-strip__wrapper').addClass('animating');
+        var $this = $(this);
+        setTimeout(function () {
+            $('.team-strip__list-item').removeClass('active');
+            $this.addClass('active');
+            $('.team-strip__list').addClass('active');
+            $('.team-strip__person').removeClass('active');
+            $('.team-strip__person[data-index="' + $this.attr("data-index") + '"]').addClass('active');
+        }, 420);
+        setTimeout(function () {
+            $('.team-strip__wrapper').removeClass('animating');
+        }, 750)
     });
 });
 let links = $('body').find('a');

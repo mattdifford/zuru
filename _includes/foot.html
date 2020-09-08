@@ -3,7 +3,6 @@
     if (document.createStyleSheet) {
         document.createStyleSheet("/assets/css/bootstrap.css");
         document.createStyleSheet("/assets/css/default.css");
-        document.createStyleSheet("/assets/css/{{include.layout}}.css");
         document.createStyleSheet("https://use.typekit.net/pxi8tmz.css");
     } else {
         var stylesheet_bs = document.createElement('link');
@@ -17,12 +16,6 @@
         stylesheet_default.rel = 'stylesheet';
         stylesheet_default.type = 'text/css';
         document.getElementsByTagName('head')[0].appendChild(stylesheet_default);
-
-        var stylesheet_layout = document.createElement('link');
-        stylesheet_layout.href = "/assets/css/{{include.layout}}.css";
-        stylesheet_layout.rel = 'stylesheet';
-        stylesheet_layout.type = 'text/css';
-        document.getElementsByTagName('head')[0].appendChild(stylesheet_layout);
 
 
         var stylesheet_font = document.createElement('link');
@@ -38,6 +31,5 @@
 <noscript>
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/css/default.css">
-    <link rel="stylesheet" href="/assets/css/{{include.layout}}.css">
     <link rel="stylesheet" href="https://use.typekit.net/pxi8tmz.css">
 </noscript>

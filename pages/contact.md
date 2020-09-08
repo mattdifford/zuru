@@ -1,9 +1,6 @@
 ---
 layout: contact
-description: This is results-driven innovation. This is money-where-our-mouth-is marketing. This is ZURU Group.
+description: We love learning about new companies. Have one you'd like to discuss? Please fill out the form.
 permalink: /contact
 title: Contact us
-header_text: Get in touch<br>to find out more
-strip_1:
-    text: Every decision we take together is another intelligent, measurable step towards your overall goals.
 ---

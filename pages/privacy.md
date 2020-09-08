@@ -1,11 +1,11 @@
 ---
 layout: page
-description: ZURU Privacy Notice
+description: Zuru Privacy Notice
 title: Privacy Notice
 permalink: /privacy
 ---
 
-# ZURU Privacy Notice
+# Zuru Privacy Notice
 
 Notice carefully as it describes our collection, use, disclosure, retention,
 and protection of your personal information.
@@ -26,12 +26,12 @@ our processing and your rights, please see below.
 
 #### 1. Who we are
 
-Our Privacy Notice applies to all services offered by ZURU Group Ltd and its
+Our Privacy Notice applies to all services offered by Zuru Group Ltd and its
 affiliates, but excludes any products, applications, or services that have
 separate privacy notices which are not incorporated in this Privacy Notice.
 
-ZURU Group Ltd controls the data collected when you interact with a website
-owned by ZURU Group Ltd.
+Zuru Group Ltd controls the data collected when you interact with a website
+owned by Zuru Group Ltd.
 
 For the purposes of the General Data Protection Regulation (the “GDPR”), Mr
 Savvy Ltd is the controller in relation to your data.
@@ -41,7 +41,7 @@ about you, or if you have any queries about your rights under local law, how
 to update your records, or how to obtain access to the information that we
 hold about you, please contact us:
 
-Post: Data Protection Officer ZURU Group Ltd 20-22 The Mall Clifton Bristol
+Post: Data Protection Officer Zuru Group Ltd 20-22 The Mall Clifton Bristol
 BS8 4DR Online: [dpo@zurugroup.com](mailto:dpo@zurugroup.com)
 
 #### 2. About our site
@@ -237,7 +237,7 @@ with access to all or parts of our websites and services.
 
 We will retain your personal information for the duration of our business
 relationship and afterwards for as long as is necessary and relevant for our
-legitimate business purposes, in accordance with the ZURU Group Ltd Data
+legitimate business purposes, in accordance with the Zuru Group Ltd Data
 Retention Policy, or as otherwise permitted by applicable laws and
 regulation. Where we no longer need your personal information, we will
 dispose of it in a secure manner (without further notice to you).
@@ -374,7 +374,7 @@ about you or if you have any queries about your rights under local law, how
 to update your records, or how to obtain a copy of the information that we
 hold about you, please contact us:
 
-Post: Data Protection Officer ZURU Group Ltd
+Post: Data Protection Officer Zuru Group Ltd
 
 20-22 The Mall
 
@@ -424,4 +424,4 @@ Wilmslow,
 
 SK9 5AF.
 
-ZURU Group Ltd - ICO Number: ZA362338
+Zuru Group Ltd - ICO Number: ZA362338
