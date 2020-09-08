@@ -219,6 +219,7 @@ body.menu-active {
 
 .team-strip {
   min-height: 100vh;
+  padding-top: 140px;
   display: flex;
   align-items: center;
   &__wrapper {
@@ -318,6 +319,7 @@ body.menu-active {
   color: #707070;
   font-size: 20px;
   font-weight: 400;
+  padding-top: 140px;
   a {
     text-decoration: none;
   }
