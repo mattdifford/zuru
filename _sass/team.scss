@@ -66,8 +66,11 @@
     flex: 0 1 100%;
     &-image {
       position: relative;
-      height: 378px;
       overflow: hidden;
+      picture,
+      img {
+        float: left;
+      }
     }
     &-title {
       position: absolute;
