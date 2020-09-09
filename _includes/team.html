@@ -10,8 +10,8 @@
             <div class="team-strip__content">
                 {% for person in site.data.team %}
                 <div class="team-strip__person" data-index="{{forloop.index}}">
-                    <!-- <div class="team-strip__person-image">{% include picture.html url=person.image alt=person.name%}
-                    </div> -->
+                    <div class="team-strip__person-image">{% include picture.html url=person.image alt=person.name%}
+                    </div>
                     <h3 class="team-strip__person-name">{{person.name}}</h3>
                     <div class="team-strip__person-content">{{person.desc | markdownify }}</div>
                 </div>
