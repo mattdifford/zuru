@@ -1,5 +1,5 @@
 ---
 layout: email_signature
-title: James
+title: JCE
 permalink: /email-signatures/james
 ---

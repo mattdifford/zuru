@@ -1,5 +1,5 @@
 ---
 layout: email_signature
-title: Marc
+title: MS
 permalink: /email-signatures/marc
 ---

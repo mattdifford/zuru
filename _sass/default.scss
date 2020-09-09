@@ -365,11 +365,13 @@ body.menu-active {
 .contact-strip {
   padding: 200px 0;
   background: #fff;
-  color: $colour_med_grey;
   text-align: center;
   &__title {
     font-family: $font_primary;
     font-weight: 500;
     font-size: 55px;
+  }
+  &__link {
+    color: $colour_med_grey;
   }
 }

@@ -1,5 +1,5 @@
 ---
 layout: email_signature
-title: Jack
+title: JD
 permalink: /email-signatures/jack
 ---

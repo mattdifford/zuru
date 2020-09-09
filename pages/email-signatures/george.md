@@ -1,5 +1,5 @@
 ---
 layout: email_signature
-title: George
+title: GL
 permalink: /email-signatures/george
 ---

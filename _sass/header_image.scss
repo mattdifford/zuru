@@ -23,7 +23,7 @@
       height: 100%;
       display: block;
       background: #000;
-      opacity: 0.5;
+      opacity: 0.7;
       mix-blend-mode: multiply;
     }
   }
@@ -56,6 +56,7 @@
     @include link_style();
     animation: fade-in 0.5s ease-in-out 1s;
     animation-fill-mode: forwards;
+    font-weight: 300;
   }
   &__socials {
     position: fixed;

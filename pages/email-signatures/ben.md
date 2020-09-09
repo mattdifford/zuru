@@ -1,5 +1,5 @@
 ---
 layout: email_signature
-title: Ben
-permalink: /email-signatures/ben
+title: BH
+permalink: /email-signatures/ben-harvey
 ---

@@ -1,5 +1,5 @@
 ---
 layout: email_signature
-title: Matt
+title: MD
 permalink: /email-signatures/matt
 ---
