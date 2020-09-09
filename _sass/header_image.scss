@@ -61,7 +61,13 @@
   &__socials {
     position: fixed;
     z-index: 999;
-    bottom: 130px;
+    bottom: 60px;
+    .icon-linkedin {
+      &:before {
+        display: block;
+        margin-top: -2px;
+      }
+    }
     @include in_size($mobile) {
       display: none;
     }

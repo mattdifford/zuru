@@ -42,7 +42,7 @@ $(document).ready(function () {
 });
 let links = $('body').find('a');
 if (links) {
-    links.on("click", function () {
+    links.on("click", function (e) {
         let body = document.querySelector('body');
         if (!($(this).parent().attr("href"))) {
             var href = $(this).attr("href");
