@@ -143,6 +143,7 @@ body.menu-active {
       flex-wrap: wrap;
       margin: 0;
       padding: 100px 15px 20px;
+      border-bottom: 1px solid $colour_med_grey;
       &-item {
         margin: 5px 0;
         flex: 0 1 100%;
