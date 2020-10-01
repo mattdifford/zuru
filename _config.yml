@@ -31,24 +31,13 @@ plugins:
   - jekyll-include-cache
   - jekyll-webp
   - jekyll-datapage-generator
+  - jekyll-sitemap
 
-page_gen:
-  - index_files: false
-    data: features
-    template: featured
-    dir: features
-    name: title
-  - index_files: false
-    data: audiences
-    template: featured
-    dir: audiences
-    name: title
-  - index_files: false
-    data: pitches
-    template: featured
-    dir: pitches
-    name: title
-
+defaults:
+  - scope:
+      path:            "assets/**/*.pdf"
+    values:
+      sitemap:         false
 brands: 'vodafone,ou,vitality,o2,barclaycard,gus,apple,lgc,secret-escapes,afh,samsung,2u'
 
 ############################################################
