@@ -33,6 +33,10 @@ $(document).ready(function () {
         if ($(this).attr("href").charAt(0) === '#') {
             $("html,body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 750);
         }
+        if (!$(this).hasClass('header__nav-link') && $('body').hasClass('menu-active')) {
+            $('.header__nav-wrapper').removeClass('active');
+            $('body').removeClass('menu-active');
+        }
     });
     $('.header__menu-icon').on("click", function (e) {
         e.preventDefault();
