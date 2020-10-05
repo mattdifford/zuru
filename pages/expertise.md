@@ -1,6 +1,6 @@
 ---
 layout: expertise
-description: This is results-driven innovation. This is money-where-our-mouth-is marketing. This is Zuru Group.
+description: "Strategy is driven by one key concept: understanding."
 permalink: /what-we-do
 title: What we do
 header_title: We create disruptive campaigns for disruptive brands

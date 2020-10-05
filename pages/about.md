@@ -1,6 +1,6 @@
 ---
 layout: about
-description: This is results-driven innovation. This is money-where-our-mouth-is marketing. This is Zuru Group.
+description: Forget middle of the road. Put mediocre firmly to one side. What Zuru Group promises you is hard-and-fast digital activation that gets you to the results you want.
 permalink: /about
 title: About us
 header_text: Hello<br>We are Zuru Group

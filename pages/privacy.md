@@ -1,6 +1,6 @@
 ---
 layout: page
-description: Zuru Privacy Notice
+description: Zuru Group Privacy Notice
 title: Privacy Notice
 permalink: /privacy
 ---
